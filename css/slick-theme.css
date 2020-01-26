@@ -102,11 +102,11 @@
 }
 .slick-next:before
 {
-    content: '>';
+    content: ">";
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '<';
+    content: "<";
 }
 
 /* Dots */
@@ -173,7 +173,7 @@
 }
 .slick-dots li button:before
 {
-    font-family: Roboto, 'Roboto Black', 'Roboto Medium', 'Roboto Thin', 'Roboto Light';
+    font-family: slick;
     font-size: 50px;
     line-height: 20px;
 
@@ -197,4 +197,46 @@
 {
     opacity: .75;
     color: #485280;
+}
+
+
+@media screen and (max-width: 800px) {
+
+.slick-prev,
+.slick-next
+{
+
+    top: 40%;
+    display: block;
+    width: 35px;
+    height: 35px;
+}
+	.slick-prev:before,
+.slick-next:before
+{
+    font-family: slick;
+    font-size: 20px;
+}
+
+	.slick-prev
+{
+    left: -20px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -20px;
+    left: auto;
+}
+}
+
+@media screen and (max-width: 500px) {
+	.slick-dots
+{
+    position: absolute;
+    bottom: 50px;
+}
+	.slick-dotted.slick-slider
+{
+    margin-bottom: 0px;
+	}
 }
