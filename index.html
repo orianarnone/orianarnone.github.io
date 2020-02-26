@@ -4,27 +4,16 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
 <script>
   $(document).ready(function(){
-    // Add smooth scrolling to all links
     $("a").on('click', function(event) {
-
-      // Make sure this.hash has a value before overriding default behavior
       if (this.hash !== "") {
-        // Prevent default anchor click behavior
         event.preventDefault();
-
-        // Store hash
         var hash = this.hash;
-
-        // Using jQuery's animate() method to add smooth page scroll
-        // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
         $('html, body').animate({
           scrollTop: $(hash).offset().top
         }, 800, function(){
-
-          // Add hash (#) to URL when done scrolling (default click behavior)
           window.location.hash = hash;
         });
-      } // End if
+      } 
     });
   });
   </script>
@@ -280,7 +269,7 @@
     </div>
   </div>
 </div>
-<div id="portfolio" class="container-fluid section ">
+<div style="padding-bottom: 50px" id="portfolio" class="container-fluid section ">
   <div class="container">
     <div class="row">
       <div class="col-lg-12 section-title">
@@ -291,59 +280,77 @@
   <div class="container">
     <div class="slider">
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal1">
-		 <img class="card-img-top img-fluid" src="images/projects/movo/Movo01.png" alt="Movo-project">
-            <h4 class="card-title">Movo</h4>
-            <p class="card-text">Design object + app</p>
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal1"> <img class="card-img-top img-fluid" src="images/projects/smart-buckets/SB01.png" alt="Smart-buckets-project">
+        <h4 class="card-title">Smart Buckets</h4>
+        <p class="card-text">Design object + app + UX</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal2">
-		 <img class="card-img-top img-fluid" src="images/portfolio-picture.png" alt="Card image cap">          
-            <h4 class="card-title"> Project Title 2 </h4>
-            <p class="card-text">What is it</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal2"> <img class="card-img-top img-fluid" src="images/projects/trenord/trenord01.png" alt="Trenord-project">
+        <h4 class="card-title"> Trenord </h4>
+        <p class="card-text">Web redesign</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal3">
-		 <img  class="card-img-top img-fluid" src="images/projects/myni/Myni01.png" alt="Card image cap">          
-            <h4 class="card-title">Myni</h4>
-            <p class="card-text">Design object + app + web</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal3"> <img  class="card-img-top img-fluid" src="images/projects/cyclot/Cyclot01.png" alt="Cyclot-project">
+        <h4 class="card-title">Cyclot</h4>
+        <p class="card-text">UX + UI design</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal4">
-		 <img class="card-img-top img-fluid" src="images/portfolio-picture.png" alt="Card image cap">          
-            <h4 class="card-title">Project Title 4</h4>
-            <p class="card-text">What is it</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal4"> <img class="card-img-top img-fluid" src="images/projects/Turin-registry-office/T01.png" alt="Turin-registry-office">
+        <h4 class="card-title">Turin Registry Office</h4>
+        <p class="card-text">Website Redesign</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal5">
-		 <img class="card-img-top img-fluid" src="images/portfolio-picture.png" alt="Card image cap">          
-            <h4 class="card-title">Project Title 5</h4>
-            <p class="card-text">What is it</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal5"> <img class="card-img-top img-fluid" src="images/projects/Discover-Lotte/L01.png" alt="Lotte01">
+        <h4 class="card-title">Discover Lotte</h4>
+        <p class="card-text">Exhibition design + app</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal6">
-		 <img class="card-img-top img-fluid" src="images/portfolio-picture.png" alt="Card image cap">          
-            <h4 class="card-title">Project Title 6</h4>
-            <p class="card-text">What is it</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal6"> <img class="card-img-top img-fluid" src="images/projects/trust/trust-04.png" alt="Trust-in-Progress">
+        <h4 class="card-title">Trust in Progress</h4>
+        <p class="card-text">Board game design</p>
         </button>
       </div>
       <div class="card-container">
-        <button  class="card" type="button" data-toggle="modal" data-target="#Modal7">
-		 <img class="card-img-top img-fluid" src="images/portfolio-picture.png" alt="Card image cap">          
-            <h4 class="card-title">Project Title 7</h4>
-            <p class="card-text">What is it</p>          
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal7"> <img class="card-img-top img-fluid" src="images/projects/myni/Myni01.png" alt="Myni-project">
+        <h4 class="card-title">Myni</h4>
+        <p class="card-text">Product design + app + website</p>
         </button>
       </div>
       <div class="card-container">
-        <button class="card" type="button" data-toggle="modal" data-target="#Modal8">
-		<img class="card-img-top img-fluid" src="images/trenord.carousel.png" alt="Card image cap">
-            <h4 class="card-title">Trenord</h4>
-            <p class="card-text">Website Redesign</p>
+        <button class="card" type="button" data-toggle="modal" data-target="#Modal8"> <img class="card-img-top img-fluid" src="images/projects/movo/Movo01.png" alt="Movo-project">
+        <h4 class="card-title">Movo</h4>
+        <p class="card-text">Product deisgn + app</p>
+        </button>
+      </div>
+      <div class="card-container">
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal9"> <img class="card-img-top img-fluid" src="images/projects/smartfoody/SF01.png" alt="SmartFoody">
+        <h4 class="card-title">SmartFoody</h4>
+        <p class="card-text">Product design + app</p>
+        </button>
+      </div>
+      <div class="card-container">
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal10"> <img class="card-img-top img-fluid" src="images/projects/Arrital/A01.png" alt="Arrital">
+        <h4 class="card-title">Arrital </h4>
+        <p class="card-text">User Experience</p>
+        </button>
+      </div>
+      <div class="card-container">
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal11">
+        <img class="card-img-top img-fluid" src="images/projects/curvalismo/C01.png" alt="C01">
+        
+        <h4 class="card-title">Curvalismo</h4>
+        <p class="card-text">Generative Design</p>
+        </button>
+      </div>
+      <div class="card-container">
+        <button  class="card" type="button" data-toggle="modal" data-target="#Modal12"> <img class="card-img-top img-fluid" src="images/projects/Drop/Drop01.png" alt="Drop">
+        <h4 class="card-title">Drop</h4>
+        <p class="card-text">Product Design + UX</p>
         </button>
       </div>
     </div>
@@ -353,30 +360,42 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle1">Movo - Time management device</h5>
+            <h5 class="modal-title" id="ModalLongTitle1">Smart Buckets</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/projects/movo/Movo01.png" class="img-fluid" alt="Movo-01" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/smart-buckets/SB01.png" class="img-fluid" alt="Buckets-01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
                 <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
-                  <p class="description"> How many times did you find yourself in a hurry?<br />
+                  <p class="description"> “Smart buckets” is an interactive system based on a set of smart containers, which
+                    are capable of recognizing the presence and the type of multiple objects inserted. Each bucket is equipped with a set of led
+                    strips that can be used as feedback. “Smart buckets” is also connected to the “Smart room” ecosystem, which enables us
+                    to build engaging activities with a focus on object categorization.<br />
                     <br />
-                    We think that the classic way to measure time are not efficient enough when you are focused on doing something else and so, you lose the sense of time. Movo provides you a new way to organize your schedule in order to be more productive and efficient. <br />
+                    The target group of the system is composed of children between 6 and 10 years old with various NDD severity rate (none to moderate). The primary users are not only children but also their therapists and teachers. For this reason we decided to develop: the objects and the activity for children, and an application for tablet as control pannel for teachers and therapists. <br />
                     <br />
-                    Differenty from a phone alarm clock is not possible to delay or switch the reminders off, movo itself is your visual reminder that keeps working telling you how much time is passing by and you need to get ready. <br />
+                    The design of the product has been conceived having in mind children and therapists needs, the main aspects that characterize it are listed below:<br />
                     <br />
-                    Movo is mainly composed by two parts: the app and the physical object.<br />
+                    1. Ergonomics: The container height is the right compromise between capacity and ease of use by children. It is equipped with a battery, hence you are free to place it wherever you wish.<br />
                     <br />
-                    With the app you can set 3 kind of reminders for each event that will be shown by the physical object as a visual and sound feedback.<br />
+                    2. Accessibility: The front panel of the bucket can be removed to give access to all the users in a wheelchair. <br />
                     <br />
-                    The green light tells you that you have a task to accomplish that day, also the name of the task will be shown by a notification on your mobile. The red light means that you have to be quick and when the buzzer starts ringing you have no time anymore. You can push it and movo will start swinging and it turns off. </p>
+                    3. Engagement: To make the product engaging and responsive we decided to put some color leds
+                    on the edges of the bucket. This ensures clear feedbacks and children’s engagement.<br />
+                    <br />
+                    4. Safety: The shape of the bucket is rounded to ensure children’s safety. Also, all the electronic is hidden to
+                    the children and accessible only by the therapist.<br />
+                    <br />
+                    5. Extensibility: Using a scale system the therapist is able to rapidly add an object to the system, without
+                    worrying to attach any tag to identify the object.<br />
+                    <br />
+                    6. Reliability: The system is reliable to ensure a smooth experience for both children and therapists. </p>
                 </div>
-                <div class="col-lg-6"> <img src="images/projects/movo/Movo02.png" class="img-fluid" style="padding: 15px 5px" alt="Movo02"> 
-				  <img src="images/projects/movo/Movo03.JPG" class="img-fluid" style="padding: 15px 5px" alt="Movo03">
-				  </div>
-				  <p class="col-lg-12 font-italic small text-center"> Year: 2018-2019<br /> Course: Hardware & Software for Design <br /> With: Erica Colombo, Alessandro Ceriani, Junpeng Zhao.</p>
+                <div class="col-lg-6"> <img src="images/projects/smart-buckets/SB01.1.png" class="img-fluid" style="padding: 15px 5px" alt="Buckets01.1"> <img src="images/projects/smart-buckets/SB02.png" class="img-fluid" style="padding: 15px 5px" alt="Buckets02"> <img src="images/projects/smart-buckets/SB03.png" class="img-fluid" style="padding: 15px 5px" alt="Buckets03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2019-2020<br />
+                  Course: Advanced User Interfaces <br />
+                  With: Valerio Colombo.</p>
               </div>
             </div>
           </div>
@@ -396,14 +415,25 @@
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/trenord/trenord01.png" class="img-fluid" style="padding: 15px 5px" alt="Trenord01"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> The main aim of Trenord is to offer an adequate answer to the raising mobility demand of Lombardy citizen. All the train information are given by website and mobile application, this one was recenty redesigned to improve the usability. The website, on the other hand, have to be redesigned. <br />
+                    We analyzed the website and the application. We conducted a research and analysis and then we compare the main tasks that each persona does on the Trenord website. We uderstood that the most used services are: buy ticket, check train status and check train schedule. <br />
+                    After that, we analyzed in detail each step of each task, the did a schema of the page architecture, we couted the clicks and the number of pages.We analized the website and the application of 3 competitors: Trenitalia, Italo and FSS. We discover some useful insights and then we defindes some parameters. We analized each website and mobile application based on our parameters and we defined some schemes.<br />
+                    After the reseach and analysis phase we started the redesign. First of all we designed a new architecture to solve all the problems that we encounter during the analysis of Trenord website, then we started producing paper mockups. Based on them we defines the website wireframes and then we finalized the style (fonts, colors palette, shapes...)<br />
+                    Finally we developed all the pages of our tasks using Adobe XD. <br />
+                  </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/trenord/T2.png" class="img-fluid" style="padding: 15px 5px" alt="Trenord02">
+                  <video style="max-width: 100%; padding: 15px 5px" class="video-fluid card-img-top" autoplay loop muted>
+                    <source src="images/projects/trenord/T3.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2019-2020<br />
+                  Course: Interactive Systems Usability Design <br />
+                  With: Elettra Bertazzoli, Erica Colombo, Maria Letizia Lasalvia, Andrea Picardi.</p>
               </div>
             </div>
           </div>
@@ -419,18 +449,33 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle3">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle3">Cyclot - Park. Play. Care.</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/cyclot/Cyclot01.png" class="img-fluid" alt="Cyclot-01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> 
+					  Cyclot is an interactive parking lot designed for IGPDecaux. 
+					  We did researches and analysis about spaces that could used to provide a service, enhance the quality of life in Milan and give advertisements. After the research we decided to go for the Moving around the city scenario, and in particular about cyclists because we saw many problems to solve and was the most fitting one with the IGPDecaux mission. 
+					  In the concept fase we designed the new asset and different interaction to link the parking lot to the advertisement. At the end we opted for a narrative game based on the quantity of parked bikes.			                      
+                    The number of bike can also see as a progressive countdown to relate to a some sort of storytelling that reveal a small part of a bigger story every time.<br />
+                    We want to create a narrative game that is moving forward depending on the amount of the parked bike<br /><br /> 
+                    1.   Gives the feedback when the bike is parked<br />
+                    2.   Counts the number of the bikes and moves the narration forwards<br />
+                    3.   To win the game residents have to park a certain amount of bikes<br />
+                    4.   At the end of the day the game is finishing and the results are showed <br /><br /> 
+					  
+                    We created a 1:1 working prototype and a 10:1 ahestetic prototype. We tested the working prototype during the Demo madness day and we collected some feedback and comments.                    
+                    Folliwing the feedbacks, we decide to work more on the interaction between the user and the asset. We decide to add gesture control to allow user to interact with the whole story. In this way each people parking the bike can interact and see the whole story and see the winning part at the end. We decided to use the light more: at the beginning the light turns on only when the user parks the bike. Now we will use the light every time the user interact with the animation on the screen and when the user win the game the lights do a big amination. 
+                    We goes from a collective one day long game to a one minute session game where everyone can join at the same time.When nothing is happening we show the company advertisement. </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/cyclot/Cyclot02.png" class="img-fluid" style="padding: 15px 5px" alt="Cyclot02"> <img src="images/projects/cyclot/Cyclot03.png" class="img-fluid" style="padding: 15px 5px" alt="Cyclot03"> <img src="images/projects/cyclot/Cyclot04.png" class="img-fluid" style="padding: 15px 5px" alt="Cyclot04"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2019-2020<br />
+                  Course: Final Design Studio <br />
+                  With: Alessandro Ceriani, Erica Colombo, Pei Lin, Irina Nickulina, Andrea Picardi.</p>
               </div>
             </div>
           </div>
@@ -446,18 +491,33 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle4">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle4">Turin Registry Office - Website Redesign</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/Turin-registry-office/T01.png" class="img-fluid" alt="Turin-01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> The Registry office of Turin did a collaboration with Politecnico di Milano to to increase the quality of its services. We conducted some research using different tools: Observations and Interviews at the registry office, desk research, usability tests and digital ethnography.<br />
+                    <br />
+                    We discovered some problems and, to solve them, we generated three possible service implementations starting from our persona needs. We agreed on focusing on the first proposal that consist on the implementation of an online website with the integration of a chat-bot (or virtual assistant) that would help the users in the navigation through the procedure in the best way possible.
+                    This solution also uses a self machine for allowing the users to receive their documents at
+                    the office, without the need of standing in line to talk to the employee. <br />
+                    <br />
+                    We analized the current architecture of the website and we created a new one, then we started producing paper mockups. Based on the wireframes We finalized the first prototype with adobe XD and we conducts some usability tests. We discover some insights about the web pages and the position and functionality of the chatbot. <br />
+                    <br />
+                    We improved the fist prototype and we developed the second version of it, we did a second round of tests, we did some adjustements and work more on the graphic until the final version of the website and the innovative interaction with the chatbot <br />
+                    <br />
+                    After that we developed the mobile versione on the website and we conducted the last usability test. <br />
+                    <br />
+                    The feedbacks about the guided procedure of the website and the interaction with the chatbot were positive and enthusiast. <br />
+                  </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/Turin-registry-office/T02.png" class="img-fluid" style="padding: 15px 5px" alt="Turin02"> <img src="images/projects/Turin-registry-office/T03.png" class="img-fluid" style="padding: 15px 5px" alt="Turin03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2018-2019<br />
+                  Course: Digital Design Studio. <br />
+                  With: Erica Colombo, Andrea Picardi, Farnaz Shahriari,  Chenhao Zheng.</p>
               </div>
             </div>
           </div>
@@ -473,18 +533,43 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle5">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle5">Discover Lotte - An immersive Exhibition</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container">
+              <video style="max-width: 100%" class="video-fluid card-img-top" autoplay loop muted>
+                <source src="images/projects/Discover-Lotte/Lotte01.mp4" type="video/mp4" />
+              </video>
+            </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> Charlotte "Lotte" Reiniger (2 June 1899 – 19 June 1981) was a German film director and the foremost pioneer of silhouette animation. Her best known films are The Adventures of Prince Achmed, from 1926—thought to be one of the oldest surviving feature-length animated films—and Papageno (1935). Reiniger is also noted for having devised the first form of a multiplane camera; she made more than 40 films, all using her invention.<br />
+                    <br />
+					  We decided to structure the exhibition in 4 parts: the introduction to Lotte, the shadow theatre, the immersive space and the interactive DIY part at the end. 
+					  The introduction to Lotte consist on a curved wall on which we project the introduction video about the subject of our exhibition. The video explains graphically her invention and her film technique.
+					  <br />
+                    <br />
+					  The next part is a shadow theatre: a 1:1 scale of her layers technique to better explain to visitors her concept. The visitors can download a mobile application and can record a video of them acting in that place. 
+					  <br />
+                    <br />
+					  The following part is the immersive space with some pillow in the center and a big screen projection on the ceiling. Visitors can be immerse in her films and stories. In addiction the walls are animated and shows some information when the user is near. There are also other animations that follow the visitors on the walls like birds, flowers and leafs.<br />
+                    <br />
+					  In the last part the user can use her technics in first person thanks to a tablet application and the digitalize version of her multilayer camera.
+                  </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/Discover-Lotte/Lotte02.PNG" class="img-fluid" style="padding: 15px 5px" alt="Lotte02">
+                  <video style="max-width: 100%" class="video-fluid card-img-top"   autoplay loop muted>
+                    <source src="images/projects/Discover-Lotte/Lotte03.mp4" type="video/mp4" />
+                  </video>
+                  <video style="max-width: 100%" class="video-fluid card-img-top" autoplay loop  muted>
+                    <source src="images/projects/Discover-Lotte/Lotte04.mp4" type="video/mp4" />
+                  </video>
+                </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2017-2018<br />
+                  Personal Project. <br />
+                  With: nobody.</p>
               </div>
             </div>
           </div>
@@ -500,18 +585,33 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle6">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle6">Trust in Progress - board game</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/trust/trust-04.png" class="img-fluid" alt="Trust01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> In this 2 weeks workshop we had to develop a board game based on our definition of trust. For us trust is:the resulting process of a personal connection, in which you delegate something or someone based on hope, personal and cultural values and experiences. 
+                   We asked ourselves some question like: <br />
+How do I learn to trust?<br />
+How do I decide when to trust?<br />
+How do people react when they’re betrayed?<br /><br />
+					  
+					  Then we started the ideation phase, we selected some ideas and we composed our proposal:<br />
+					  We are making a physical game for teenagers who will interact with it at home because we want them to define their own set of rules for trusting others in order to know themselves better through failures.
+					  We created the board game and we did two days of testing. The final board game bring users to have fun through a decision-making process, face different type of situations and identify themselves in them.
+					  <br /><br />
+					  
+You are suppose to choose between two answers and then accept the consequences. If you picked the good one, you will gain 1 point. If you fail, you will explain to the other players how you will face the new situation.
+You will discuss with them about your explaination and then they will evaluate your answer giving you from 1 to 3 point.
+Each point let you to place a pin on your board in the indicated space. At the end of the game you will have a radar schema that describe your personality. </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/trust/trust02.png" class="img-fluid" style="padding: 15px 5px" alt="Trust"> <img src="images/projects/trust/trust03.png" class="img-fluid" style="padding: 15px 5px" alt="Trust03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2018-2019<br />
+                  Course: Workshop <br />
+                  With: Feng Wubing, Michela Grisa, Milena Stefanova, Serena Alampi</p>
               </div>
             </div>
           </div>
@@ -527,18 +627,27 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle7">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle7">Myni - Follow your emotions</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/myni/Myni01.png" class="img-fluid" alt="Myni01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> We focused about the relationship between the new generations (x and y) and small expenses. We did researches about users and their relation with money in two forms: cash and card. We use different tools: interviews, observations, questionnaires, and then we sum up our findings in customer journey map and 3 personas. We understood that the trigger of the expenses is not the means but is the amount. In one month the small expenses became really big and no one remember the experience linked to that purchase because it was not important. <br />
+                    <br />
+                    So we decided to give value to the little purchases and link them to the user emotion. The system will know the feeling of the user thanks to different sersors and data gathering. Knowing the buying habits and the emotions, the system can suggest which expenses were valuable and which one can maybe be avoided. In this way we will increase the quality and the serenity of users lifes.<br />
+                    <br />
+                    The system is composed by a social media campaign, a landing page, a smart bracelet to track the emotions and an application.
+                    The bracelet allow users to have a real time feedbacks about the purchase to make him/her more conscious about the expenses. In every moment the user can see the daily amount of purchase and the real time emotion. The feedback is given by coloured led.<br />
+                    <br />
+                  </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/myni/myni02.png" class="img-fluid" style="padding: 15px 5px" alt="Myni02"> <img src="images/projects/myni/myni03.PNG" class="img-fluid" style="padding: 15px 5px" alt="Myni03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2018-2019<br />
+                  Course: Interaction Systems Studio <br />
+                  With: Antonella Autuori, Elena Catani, Sara Corradini, Giuditta Pinotti, Giulia Venturis.</p>
               </div>
             </div>
           </div>
@@ -554,18 +663,202 @@
       <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="ModalLongTitle8">Trenord - Website Redesign</h5>
+            <h5 class="modal-title" id="ModalLongTitle8">Movo - Time management device</h5>
             <button type="button" class="close" data-dismiss="modal">x</button>
           </div>
           <div class="modal-body">
-            <div class="container"> <img src="images/trenord.carousel.png" class="img-fluid" alt="riempitivo" style="padding: 15px 5px"> </div>
+            <div class="container"> <img src="images/projects/movo/Movo01.png" class="img-fluid" alt="Movo-01" style="padding: 15px 5px"> </div>
             <div class="container">
               <div class="row">
-                <div class="col-lg-5" style="padding: 15px 5px 15px 20px">
-                  <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Accumsan sit amet nulla facilisi morbi tempus. Interdum consectetur libero id faucibus nisl tincidunt eget. Nisl suscipit adipiscing bibendum est ultricies integer quis auctor. Tortor at auctor urna nunc. Felis donec et odio pellentesque diam volutpat commodo. Sapien nec sagittis aliquam malesuada bibendum. Tempus iaculis urna id volutpat lacus laoreet non. Luctus accumsan tortor posuere ac ut. </p>
-                  <p class="font-italic"> year:2017-2018, with: x, y, z.</p>
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> How many times did you find yourself in a hurry?<br />
+                    <br />
+                    We think that the classic way to measure time are not efficient enough when you are focused on doing something else and so, you lose the sense of time. Movo provides you a new way to organize your schedule in order to be more productive and efficient. <br />
+                    <br />
+                    Differenty from a phone alarm clock is not possible to delay or switch the reminders off, movo itself is your visual reminder that keeps working telling you how much time is passing by and you need to get ready. <br />
+                    <br />
+                    Movo is mainly composed by two parts: the app and the physical object.<br />
+                    <br />
+                    With the app you can set 3 kind of reminders for each event that will be shown by the physical object as a visual and sound feedback.<br />
+                    <br />
+                    The green light tells you that you have a task to accomplish that day, also the name of the task will be shown by a notification on your mobile. The red light means that you have to be quick and when the buzzer starts ringing you have no time anymore. You can push it and movo will start swinging and it turns off. </p>
                 </div>
-                <div class="col-lg-7"> <img src="images/trenord.modal-02.png" class="img-fluid" style="padding: 15px 5px" alt="riempitivo"> </div>
+                <div class="col-lg-6"> <img src="images/projects/movo/Movo02.png" class="img-fluid" style="padding: 15px 5px" alt="Movo02"> <img src="images/projects/movo/Movo03.png" class="img-fluid" style="padding: 15px 5px" alt="Movo03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2018-2019<br />
+                  Course: Hardware & Software for Design <br />
+                  With: Erica Colombo, Alessandro Ceriani, Junpeng Zhao.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal9 -->
+    <div class="modal fade " id="Modal9" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle9" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle9">SmartFoody Management system</h5>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <div class="container"> <img src="images/projects/smartfoody/SF01.png" class="img-fluid" alt="SmartFoody-01" style="padding: 15px 5px"> </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> I really want to deal with the problem of food. I became aware of the seriousness of the problem through desk and field research, interviewing supermarket workers and families in their homes. I also tested people's awareness of this issue with a questionnaire.<br />
+                    <br />
+                    From questionnaires to consumers and interviews with managers of
+                    several supermarkets show that the most difficult products to monitor are the products stored in the refrigerator departments or in domestic refrigerators.
+                    According to the data collected by the WRAP of 2009 the foods most
+                    wasted by consumers are fresh ones. <br />
+                    <br />
+                    I concentrated on the domestic waste of food, I did a lot of research on possible technologies and finally I decided to use RFID antennas and passive tags. <br />
+                    The company that produces the food products will apply an RFID label on the packaging of the individual product.
+                    In supermarkets RFID readers will be placed in the fridge departments.
+                    Consumers will have RFID readers inside the refrigerators
+                    to monitor food with a single expiry date.
+                    Foods that, when opened, must be consumed in a few days, must be monitored in a different way. An RFID HF proximity reader is applied on the front door of the refrigerator, so the system recognizes the food and changes its expiry date considering it "open".
+                    Both the reader and the mini one connect to an application via bluetooth.<br />
+                    <br />
+                    The App allows consumers to view all the products in the refrigerator in order of expiry, to add leftovers in the system to the system, to generate a shopping list based on the tastes of the family members and to view recipes with ingredients present in the own fridge about to expire.<br />
+                    <br />
+                  </p>
+                </div>
+                <div class="col-lg-6"> <img src="images/projects/smartfoody/SF02.png" class="img-fluid" style="padding: 15px 5px" alt="SmartFoody02"> <img src="images/projects/smartfoody/SF03.png" class="img-fluid" style="padding: 15px 5px" alt="SmartFoody03"> <img src="images/projects/smartfoody/SF04.png" class="img-fluid" style="padding: 15px 5px" alt="SmartFoody04"></div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2017-2018<br />
+                  Course: Final Design Studio - P3 <br />
+                  With: nobody.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal10 -->
+    <div class="modal fade " id="Modal10" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle10" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle10">Arrital showroom experience</h5>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <div class="container"> <img src="images/projects/Arrital/A01.png" class="img-fluid" alt="Arrital-01" style="padding: 15px 5px"> </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> Arrital has been designing, manufacturing and selling kitchens for over forty years. The company has noticed that customers are changing and wants to keep up with the times.
+                    The brief assigned to us foresees the design of a kitchen suitable for future new customers: the Millennials. <br />
+                    <br />
+                    They are digital natives, spend a lot of time on Social Networks and buy through the internet. They seek spaces for socialization because for them, any sort of interaction is essential. They do not buy goods, because they prefer to rent them. Millennials are always looking for interesting experiences to share and want to spend less to have more. Based on the needs of the company and the characteristics of the Millennials, we decided to create an experience around the kitchen.<br />
+                    <br />
+                    The location is the Arrital showroom, since less people nowdays went into physical showroom. The experience is based on cooking together following tutorials on the Digital Wall.
+                    The kitchen is made up of 5 parts each specialized for a specific task. 
+                    Thanks to a proximity sensor, the part of the kitchen that is actually used is switched on. The different steps of the tutorial are explained near the location where the activities has to be done by partecipants. The screens light up in sequence according to the needed steps. If the user is still taking a step, the video awaits him. Only after the user has finished, the video will appear at the following location.<br />
+                    <br />
+                    We designed 3 different experiences: A small one for 2 or 4 people where partecipants can challenge themselves following the same recipe. A medium one up to 10 people, where friends can cooperate or challenge themselves, eat on a big table and then play some board games. The last one is designed for teambuilding with 4 kitchen modules, a big table and a screen projector for conferences. <br />
+                  </p>
+                </div>
+                <div class="col-lg-6"> <img src="images/projects/Arrital/A02.png" class="img-fluid" style="padding: 15px 5px" alt="Arrital02"> <img src="images/projects/Arrital/A03.png" class="img-fluid" style="padding: 15px 5px" alt="Arrital03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2017-2018<br />
+                  Course: trainee workshop <br />
+                  With: Ilaria Casciaro, Alessia Rotondo, Sara Pincella.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal11 -->
+    <div class="modal fade " id="Modal11" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle11" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle11">Curvalismo - Generative Design</h5>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+              <video style="max-width: 100%; padding: 15px 5px" class="video-fluid card-img-top" autoplay loop muted>
+                <source src="images/projects/curvalismo/C02.mp4" type="video/mp4" />
+              </video>
+            </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> I was inspired by the artistic movements of Divisionism and post Impressionism, to which I added a touch of pop art. I was fascinated by the different painting techniques, in particular the technique used by Vang Gogh and that used by Seurat.
+                    I start from a black and white and high contrast photo. The image does not appear on the sketch, but there are lines that recreate the photo below based on its light and dark parts.
+                    The lines change their appearance based on the color of the underlying pixel.<br />
+                    <br />
+                    If the Pixel is DARK, then the line has: high thickness, low speed, greater curvature.<br />
+                    <br />
+                    If the Pixel is CLEAR, then the line has: low thickness, high speed and small curvature. <br />
+                    <br />
+                    Initially I created a simple ball that bounces through the Dot class having two methods and two attributes. Then I carried out a color test by filling the ball with the color of the underlying pixel.
+                    I created a Dot Array and then, through a linear map, I set the thickness and speed. I set the degree of curvature of the line inversely proportional to the color of the pixel.
+                    Finally I thought of a solution for the recognition of the edges for my project. The thickness is no longer linear, but follows the equation of a parabola to be more precise and therefore optimize the program and make the display clearer.<br />
+                    <br />
+                  </p>
+                </div>
+                <div class="col-lg-6"> <img src="images/projects/curvalismo/C05.jpg" class="img-fluid" style="padding: 15px 5px" alt="Curvalismo02"> <img src="images/projects/curvalismo/C03.png" class="img-fluid" style="padding: 15px 5px" alt="Curvalismo02">  </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2017-2018<br />
+                  Course: Generative Design <br />
+                  With: nobody.</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Modal12 -->
+    <div class="modal fade " id="Modal12" tabindex="-1" role="dialog" aria-labelledby="ModalCenterTitle12" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLongTitle12"> Drop - new way of reading time</h5>
+            <button type="button" class="close" data-dismiss="modal">x</button>
+          </div>
+          <div class="modal-body">
+            <div class="container"> <img src="images/projects/Drop/Drop01.png" class="img-fluid" alt="Drop-01" style="padding: 15px 5px"> </div>
+            <div class="container">
+              <div class="row">
+                <div class="col-lg-6" style="padding: 15px 5px 15px 20px">
+                  <p class="description"> Visiting the Salone del Mobile satellite show I was inspired by the watches presented. Most were classic wall or desk clocks with some peculiarity of shape. Very few have tried to do something innovative. I was fascinated by the idea of finding an alternative way to mark, mark and therefore read the time. There are several watches that try to unhinge the archetype. This action culminates in a watch without numbers and hands (fundamental elements that characterize the watch).<br />
+                    <br />
+                    The most valid substitutes for numbers and hands are LEDs.
+                    The principle of merging LED technology with the classic round shape of the watch was a very valid solution.
+                    I thought of a system consisting of 36 LEDs for the hours (3 LEDs for each hour) and 60 LEDs for the minutes.
+                    The LEDs were controlled by Arduino through shift registers. I added a form that kept the time and communicated it to Arduino.<br />
+                    <br />
+                    After a long work of experimentation of technology emerged
+                    always some problem that could not be solved.
+                    Initially, it was decided to continue building the prototype by implementing the technological part in the physical model.
+                    Later we discovered how to optimize the system by changing the electronic components and greatly reducing the space dedicated to this part.
+                    So the need for a change of size and shape arose and in this way Drop was born<br />
+                    <br />
+                  </p>
+                </div>
+                <div class="col-lg-6"> <img src="images/projects/Drop/Drop02.png" class="img-fluid" style="padding: 15px 5px" alt="Drop02"> <img src="images/projects/Drop/Drop03.png" class="img-fluid" style="padding: 15px 5px" alt="Drop03"> </div>
+                <p class="col-lg-12 font-italic small text-center"> Year: 2017-2018<br />
+                  Personal Project. <br />
+                  With: nobody.</p>
               </div>
             </div>
           </div>
@@ -587,15 +880,15 @@
   </div>
   <div style="padding-bottom: 100px" class="container">
     <div class="row ">
-      <div style="border-color: #485280;" class="col-lg-4 responsive-separation"> <img style="width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/skype.png" alt="illustrator-icon">
+      <div style="border-color: #485280;" class="col-lg-4 responsive-separation"> <img style="width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/skype.png" alt="skype-icon">
         <p class="text-center"> Skipe: </p>
         <p style="padding-bottom: 30px" class="text-center"> orianarnone </p>
       </div>
-      <div style="border-color: #485280;" class="col-lg-4 responsive-separation"> <img style=" width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/phone.png" alt="illustrator-icon">
+      <div style="border-color: #485280;" class="col-lg-4 responsive-separation"> <img style=" width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/phone.png" alt="phone-icon">
         <p class="text-center">Phone: </p>
         <p style="padding-bottom: 30px" class="text-center"> +39 3791120331 </p>
       </div>
-      <div class="col-lg-4"> <img style=" width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/email.png" alt="illustrator-icon">
+      <div class="col-lg-4"> <img style=" width: 50px; margin-left: auto; margin-right: auto; margin-bottom: 30px; margin-top: 30px; display: block" src="images/contacts-icons/email.png" alt="mail-icon">
         <p class="text-center"> Mail: </p>
         <p class="text-center">orianarnone@gmail.com </p>
       </div>
@@ -613,16 +906,15 @@
           Mail: orianarnone@gmail.com<br />
         </footer>
       </div>
-      <div style="border-color:#A2A8C2;padding-top:80px" class="col-lg-4 responsive-separation">
-        <footer class="text-center" style="color:#A2A8C2"> Home<br />
-          Experiences/Education<br />
-          Personal Skills<br />
-          Portfolio<br />
-          Contacts </footer>
-      </div>
+      <div style="border-color:#A2A8C2; padding-top:80px" class="col-lg-4 responsive-separation text-center"> <a class=" js-scroll-trigger" style="color:#A2A8C2" href="#home">Home <br />
+        </a> <a class=" js-scroll-trigger" style="color:#A2A8C2" href="#edu">Experiences/Education <br />
+        </a> <a class=" js-scroll-trigger" style="color:#A2A8C2" href="#skills">Personal Skills <br />
+        </a> <a class=" js-scroll-trigger" style="color:#A2A8C2" href="#portfolio">Portfolio <br />
+        </a> <a class=" js-scroll-trigger" style="color:#A2A8C2" href="#Contacts">Contacts <br />
+        </a> </div>
       <div style="padding: 80px 40px 0px 40px" class="col-lg-4">
-        <footer class="text-center" style="color:#A2A8C2"> I hereby authorize the use of my personal data in accordance to the GDPR 679/16 - "European regulation on the protection of personal data".
-          <br /><br />
+        <footer class="text-center" style="color:#A2A8C2"> I hereby authorize the use of my personal data in accordance to the GDPR 679/16 - "European regulation on the protection of personal data". <br />
+          <br />
           &copy; Copyright 2020 orianarnone </footer>
       </div>
     </div>
@@ -641,7 +933,7 @@
     });
         </script> 
 <script src="js/slick.min.js"></script> 
-<script src="js/slick.js"></script>
+<script src="js/slick.js"></script> 
 <script src="js/myjs.js"></script>
 </body>
 </html>

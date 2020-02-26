@@ -1,6 +1,30 @@
 @charset "utf-8";
 @import url("../css/timeline.css");
 
+.fadeIn {
+  -webkit-animation: opac 5s; /* Safari 4+ */
+  -moz-animation:    opac 5s; /* Fx 5+ */
+  -o-animation:      opac 5s; /* Opera 12+ */
+  animation:         opac 5s; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes opac {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-moz-keyframes opac {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@-o-keyframes opac {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+@keyframes opac {
+  0%   { opacity: 0; }
+  100% { opacity: 1; }
+}
+
 span{
 	display: inline-block;
 }
@@ -36,7 +60,7 @@ span{
 
 .parallax {
   /* The image used */
-  background-image: url("../images/Hero-banner.png");  
+  background-image: url("../images/Bg-desktop.jpg");  
   width: 100%;  
   background-attachment: fixed;
   background-position: center center;
