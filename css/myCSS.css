@@ -76,8 +76,7 @@ p {
   color: #485280;
   font-size: medium;
 }
-.section-title-edu {
-  color: hsla(229, 28%, 39%, 1.00);
+.section-pdf {
   margin-top: 100px;
   margin-bottom: 50px;
 }
@@ -88,6 +87,24 @@ p {
   padding-bottom: 50px;
 	border-top: solid;
 	border-top-color: #F4A584;
+}
+
+.pdf-link{
+    background-color: #485280;
+	margin-bottom: 50px;
+	display: inline-block;
+    border: none;
+    color: white;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 30px;
+    font-weight: bold;
+    font-size: large;
+	border-radius: 50px;
+}
+
+.pdf-link:hover {
+  background-color: #F4A584;
 }
 
 .bluebox {
