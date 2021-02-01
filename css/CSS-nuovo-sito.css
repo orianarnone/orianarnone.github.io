@@ -101,6 +101,7 @@ body {
   padding: 7% 0 7% 0;
   background-color: whitesmoke;
   border-radius: 2.25rem;
+  border: 1px;
   float: center;
 }
 .download-pdf:hover, .download-pdf:focus {
