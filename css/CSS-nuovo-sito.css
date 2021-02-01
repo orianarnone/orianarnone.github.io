@@ -102,6 +102,7 @@ body {
   background-color: whitesmoke;
   border-radius: 2.25rem;
 display: block;
+	cursor: pointer !important;
 }
 .download-pdf:hover, .download-pdf:focus {
   z-index: 1;
@@ -279,6 +280,7 @@ footer {
   border-radius: 2.25rem;
   float: center;
 	display: block;
+	cursor: pointer !important;
 }
 .download-pdf2:hover, .download-pdf2:focus {
   z-index: 1;
