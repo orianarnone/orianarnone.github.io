@@ -3,6 +3,107 @@ body {
  /* overflow-x: hidden;*/
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   font-size: 16px;
+	/*animation: fadein 2s;
+    -moz-animation: fadein 2s; Firefox 
+    -webkit-animation: fadein 2s;  Safari and Chrome
+    -o-animation: fadein 2s; Opera*/
+}
+
+.animation-title{
+	opacity: 0;
+		animation: fadein 0.5s ease-in both;
+	animation-delay: 0s;
+}
+
+col{
+	opacity: 0;
+}
+
+#dp-Phyleas{
+	animation: fadein 1s ease-in both;
+	animation-delay: 1s;
+}
+
+#dp-Mybubble{
+	animation: fadein 1s ease-in both;
+	animation-delay: 1.4s;
+}
+
+#dp-Myni{
+	animation: fadein 1s ease-in both;
+	animation-delay: 1.8s;
+}
+
+#dp-Movo{
+	animation: fadein 1s ease-in both;
+	animation-delay: 2.2s;
+}
+
+#dp-Eggup{
+	animation: fadein 1s ease-in both;
+	animation-delay: 2.6s;
+}
+
+#dp-Learn{
+	animation: fadein 1s ease-in both;
+	animation-delay: 3s;
+}
+
+#dp-Trenord{
+	animation: fadein 1s ease-in both;
+	animation-delay: 3.4s;
+}
+
+#dp-Anagrafe{
+	animation: fadein 1s ease-in both;
+	animation-delay: 3.8s;
+}
+
+#dp-Lotte{
+	animation: fadein 1s ease-in both;
+	animation-delay: 4.2s;
+}
+
+#dp-Buckets{
+	animation: fadein 1s ease-in both;
+	animation-delay: 4.6s;
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 /* Toggle Styles */
@@ -75,6 +176,9 @@ body {
   background-color: white;
   width: 100%;
   float: none;
+	opacity: 0;
+	animation: fadein 1s ease-in both;
+	animation-delay: 1s;
 }
 .icon-top-bar {
   font-size: 15px;
@@ -97,12 +201,11 @@ body {
 .download-pdf {
   color: #495057;
   width: 90%;
-  margin-top: 15px;
+  margin-top: 25px;
   padding: 7% 0 7% 0;
   background-color: whitesmoke;
   border-radius: 2.25rem;
 display: block;
-	cursor: pointer !important;
 }
 .download-pdf:hover, .download-pdf:focus {
   z-index: 1;
@@ -118,12 +221,35 @@ display: block;
   float: left;
   border: none;
 }
-.navbar-default .menu-icon, .navbar-default .menu-icon:hover, .navbar-default .menu-icon:focus {
-  background-color: coral;
+ .menu-icon:hover, .menu-icon:focus {
+  background-color: #FFDBCF;
 }
-.navbar-default .menu-icon {
-  background-color: #fff;
+
+
+@media screen and (max-width: 576px) {
+  .menu-icon, .icon-top-bar {
+    font-size: 25px;
+    margin-right: 5px;
+    padding: 8px 10px 8px 10px;
+    cursor: pointer;
+  }
+	
+	.custom-close{
+    font-size: 25px;
+    margin-right: 5px;
+    padding: 8px 14px 8px 12px;
+    cursor: pointer;
+  }
+	
+	.padding-about{
+	padding-left: 0%;
+	padding-right: 0%;
 }
+	
+}
+
+
+
 
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
@@ -133,14 +259,22 @@ display: block;
 }
 .space {
   padding-bottom: 36px;
-}
-	
-  .menu-icon {
-    font-size: 15px;
+}	
+  .menu-icon, .icon-top-bar {
+    font-size: 21px;
     margin-right: 5px;
-    padding: 6px 8px 6px 8px;
+    padding: 7px 9px 7px 9px;
     cursor: pointer;
-  }
+  }	
+	
+	  .custom-close{
+    font-size: 21px;
+    margin-right: 5px;
+    padding: 7px 15px 7px 13px;
+    cursor: pointer;
+  }	
+	
+	
   .affix {
     position: static;
   }
@@ -158,19 +292,15 @@ display: block;
     padding-left: 3%;
 	margin-top: 60px !important;
   }
-	
 	h2 {
 		font-size: medium !important;
 	}
-	
 	.container-photo-text{
 	padding-bottom: 50px !important;
 }
-
 	.profile-img{
 		margin-top:30px !important;
 	}
-	
   .space {
     padding-bottom: 70px;
     padding-left: 3%;
@@ -178,11 +308,9 @@ display: block;
   .navbar-custom {
 	  padding: 3% 0 10px 3%;
   }
-	
 	.icon-margin-50 {
   margin-right: 3%;
 }
-	
   #sidebar {
     margin-left: -100%;
     font-size: 20px;
@@ -194,7 +322,7 @@ display: block;
   .list-group-item {
     width: auto;
     margin-bottom: 15px;
-    padding: 8% 0 8% 0;
+    padding: 25px 0 25px 0;
     border-radius: 2.25rem;
   }
   .list-group-item:first-child, .list-group-item:last-child {
@@ -211,11 +339,17 @@ display: block;
     height: 100%;
     z-index: 51;
     margin: 0px;
-    padding: 150px 150px 20px 150px;
+    padding: 150px 50px 20px 50px;
     position: fixed;
     top: 0px;
     left: -100%;
   }
+	.download-pdf{
+		width: 100%;
+		padding: 25px 0 25px 0 !important;
+	}
+	
+	
   .sidebar-offcanvas ul li {
     margin: 0
   }
@@ -230,16 +364,22 @@ display: block;
     border: none;
     border-radius: 0
   }
-  .nav {
-    margin-top: 0px;
-  }
-  .nav > li > a:hover, .nav > li > a:focus {
-    background-color: #ff625f
-  }
   .active {
     left: 0;
   }
+	.padding-about{
+	padding-left: 0;
+	padding-right: 0;
 }
+	
+}
+
+@media screen and (max-width: 1200px) {
+		.padding-text{
+	padding: 3rem 0rem 3rem 0rem !important;
+}
+}
+
 
 /*space */
 h1 {
@@ -263,24 +403,25 @@ h2{
 
 /*footer style*/
 footer {
-  padding: 3%;
+  padding: 60px 0px 60px 0px;
   background-color: grey;
   color: whitesmoke;
   font-size: 13px;
+	text-align: center;
 }
 
 /*about me*/
+
+
 .download-pdf2 {
 	
   color: #495057;
-  width: 95%;
-  margin-top: 25px;
-  padding: 7% 0 7% 0;
+  margin-bottom: 25px;
+	padding: 22px 0 22px 0 !important;
   background-color: #FFDBCF;
   border-radius: 2.25rem;
   float: center;
 	display: block;
-	cursor: pointer !important;
 }
 .download-pdf2:hover, .download-pdf2:focus {
   z-index: 1;
@@ -305,13 +446,10 @@ footer {
 	padding-bottom: 40px;
 }
 
-.about-title{
+.about-title, .about-subtitle{
 margin: 0px;
 }
 
-.about-subtitle{
-	margin: 0px;
-}
 
 .margin-about{
 	position: relative;
@@ -364,3 +502,12 @@ strong{
   float: inherit;
 
 }
+
+.padding-text{
+	padding: 3rem;
+}
+
+.coral-text{
+	color: coral;
+}
+
