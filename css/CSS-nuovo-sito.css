@@ -3,10 +3,6 @@ body {
  /* overflow-x: hidden;*/
   font-family: Futura, Trebuchet MS, Arial, sans-serif;
   font-size: 16px;
-	/*animation: fadein 2s;
-    -moz-animation: fadein 2s; Firefox 
-    -webkit-animation: fadein 2s;  Safari and Chrome
-    -o-animation: fadein 2s; Opera*/
 }
 
 .animation-title{
@@ -246,6 +242,23 @@ display: block;
 	padding-right: 0%;
 }
 	
+	.padding-container-modal{
+	padding:0px;
+}
+
+
+.padding-text-modal{
+	padding:50px 0px 50px 0px !important;
+}
+
+.modal-subtitle-bottom{
+	padding:0px 0px 20px 0px !important;
+}
+
+.padding-images-modal-wbg{
+	padding: 50px 0px !important;
+}
+	
 }
 
 
@@ -253,6 +266,23 @@ display: block;
 
 /* collapsed sidebar styles */
 @media screen and (max-width: 767px) {
+	
+	.modal-body {
+  
+  padding: 0rem !important;
+}
+	.padding-text-modal{
+	padding:50px 0px 50px 0px !important;
+}
+
+.modal-subtitle-bottom{
+	padding:0px 0px 20px 0px !important;
+}
+
+.padding-images-modal-wbg{
+	padding: 50px 0px !important;
+}
+	
 	
 .color-h4{
 	display: block !important;
@@ -378,6 +408,19 @@ display: block;
 		.padding-text{
 	padding: 3rem 0rem 3rem 0rem !important;
 }
+	
+	.padding-text-modal{
+	padding:50px 0px 50px 0px !important;
+}
+
+.modal-subtitle-bottom{
+	padding:0px 0px 20px 0px !important;
+}
+
+.padding-images-modal-wbg{
+	padding: 50px 0px !important;
+}
+	
 }
 
 
