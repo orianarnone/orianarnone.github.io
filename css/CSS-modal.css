@@ -7,6 +7,9 @@
 
 }
 
+.pointer{
+	cursor: pointer !important;
+}
 
 
 .modal {
