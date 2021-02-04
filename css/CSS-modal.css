@@ -2,7 +2,8 @@
 @media screen and (max-width: 767px) {
 	.modal-dialog {
   width: 100% !important;
-  margin-left: 0px !important;
+  margin-left: auto !important;
+		margin-right: auto !important;
 }
 
 }
