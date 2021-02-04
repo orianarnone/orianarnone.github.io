@@ -26,7 +26,7 @@
         <p class="padding-bottom">&nbsp;</p>
       </div>
     </div>
-    <div class="sidebar-offcanvas">
+    <div class="sidebar-offcanvas" id="sidebar-check">
       <div class="list-group text-center" id="list-tab" role="tablist"> <a class="list-group-item list-group-item-action active" data-toggle="list" href="#digitalportfolio" role="tab">Digital Portfolio</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#aboutme" role="tab">About Me</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">Contact</a> </div>
       <div class="container-fluid"> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
     </div>
@@ -630,12 +630,12 @@
                   <div class="container-fluid padding-container-modal animation-title">
                     <p class="modal-title text-center">Smart Buckets</p>
                     <div class=" border-top">
-                      <p class="padding-text-modal text-about"> “Smart buckets” is an interactive system based on a set of smart containers, which are capable of recognizing the presence and the type of multiple objects inserted thanks to a scale system. The containers are connected to the “Smart room” ecosystem, but they are also equipped with led strips for giving feedback. The target group is children between 6 and 10 years old with various NDD severity rate and their therapists and teachers, So we decided to design also a tablet application to be used as a control panel.<br>
+                      <p class="padding-text-modal text-about"> “Smart buckets” is an interactive system based on a set of <strong>smart containers</strong>, which are capable of recognizing the presence and the type of multiple objects inserted thanks to a scale system. The containers are connected to the “Smart room” ecosystem, but they are also equipped with led strips for giving feedback. The target group is <strong>children between 6 and 10 years old with various NDD severity</strong> rate and their therapists and teachers, So we decided to design also a tablet application to be used as a control panel.<br>
                         <br>
                         The design was guided by the user’s needs, so the main aspects of the system are:
                         Ergonomics, Accessibility, Engagement, Safety, Extensibility, and Reliability.<br>
                         <br>
-                        The dimensions are a good compromise between capacity and children’s usability, the bucket front panel can be removed giving access to wheelchair users, the bucket colored LEDs ensure clear feedback and children’s entertainment, the shape of the bucket is rounded and the electronic is hidden to children, the therapist can rapidly add an object to the system, without worrying to attach any tag to the object, the system is reliable to ensure a smooth experience for both children and therapists.</p>
+                        The dimensions are a good compromise between capacity and children’s usability, the bucket front panel can be removed giving access to wheelchair users, the bucket colored LEDs ensure <strong>clear feedback</strong> and children’s entertainment, the shape of the bucket is rounded and the electronic is hidden to children, the therapist can rapidly add an object to the system, without worrying to attach any tag to the object, the system is reliable to <strong>ensure a smooth experience for both children and therapists</strong>.</p>
                     </div>
                     <img src="images/buckets/Bucket2.png" class="container-fluid padding-images-modal" alt="...">
                     <div>
@@ -733,13 +733,15 @@
 <script>
     	$(document).ready(function() {
 		  $('[data-toggle=offcanvas]').click(function() {
-		    $('.sidebar-offcanvas').addClass('active', 1000);
+		    $('.sidebar-offcanvas').toggleClass('active', 1000);
 		  });
 		});
 
 	$( '.sidebar-offcanvas div' ).on("click", function(){
   $('.sidebar-offcanvas').removeClass('active', 1000);
 });
+	
+	
 	
 	</script>
 </body>
