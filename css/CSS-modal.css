@@ -3,7 +3,7 @@
 	.modal-dialog {
   width: 100% !important;
   margin-left: auto !important;
-		margin-right: auto !important;
+		margin-right: 0px;
 }
 
 }
@@ -16,7 +16,7 @@
 .modal {
   position: fixed;
   top: 0px;
-  left: 0;
+	float: right !important;
   z-index: 1050;
   display: none;
   width: 100% !important;

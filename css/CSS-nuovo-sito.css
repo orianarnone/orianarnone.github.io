@@ -16,53 +16,53 @@ col{
 }
 
 #dp-Phyleas{
-	animation: fadein 1s ease-in both;
+	animation: fadein 0.5s ease-in both;
 	animation-delay: 1s;
 }
 
 #dp-Mybubble{
-	animation: fadein 1s ease-in both;
-	animation-delay: 1.4s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 1.2s;
 }
 
 #dp-Myni{
-	animation: fadein 1s ease-in both;
-	animation-delay: 1.8s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 1.4s;
 }
 
 #dp-Movo{
-	animation: fadein 1s ease-in both;
-	animation-delay: 2.2s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 1.6s;
 }
 
 #dp-Eggup{
-	animation: fadein 1s ease-in both;
-	animation-delay: 2.6s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 1.8s;
 }
 
 #dp-Learn{
-	animation: fadein 1s ease-in both;
-	animation-delay: 3s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 2s;
 }
 
 #dp-Trenord{
-	animation: fadein 1s ease-in both;
-	animation-delay: 3.4s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 2.2s;
 }
 
 #dp-Anagrafe{
-	animation: fadein 1s ease-in both;
-	animation-delay: 3.8s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 2.4s;
 }
 
 #dp-Lotte{
-	animation: fadein 1s ease-in both;
-	animation-delay: 4.2s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 2.6s;
 }
 
 #dp-Buckets{
-	animation: fadein 1s ease-in both;
-	animation-delay: 4.6s;
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 2.8s;
 }
 
 
