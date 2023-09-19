@@ -65,6 +65,11 @@ col{
 	animation-delay: 2.8s;
 }
 
+#dp-Cookie{
+	animation: fadein 0.5s ease-in both;
+	animation-delay: 1s;
+}
+
 
 @keyframes fadein {
     from {
