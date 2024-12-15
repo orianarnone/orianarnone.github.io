@@ -13,6 +13,7 @@
 <!-- Bootstrap -->
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
 <link href="css/CSS-nuovo-sito.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/CSS-modal.css" rel="stylesheet" type="text/css">
 
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
@@ -24,41 +25,84 @@
 </head>
 
 <body>
-<div id="viewport"> 
-  
-  <!-- Sidebar -->
-  <div id="sidebar" class="text-center">
-    <div class="sidebar-hide">
-      <div class="text-center"><img src="images/logo-ori.png" width="auto" height="70px" alt="Oriana-logo"/> &nbsp;</div>
-      <div>
-        <p class="padding-bottom">&nbsp;</p>
-      </div>
-    </div>
-    <div class="sidebar-offcanvas" id="sidebar-check">
-      <div class="list-group text-center" id="list-tab" role="tablist"> <a class="list-group-item list-group-item-action active" data-toggle="list" href="#digitalportfolio" role="tab">Digital Portfolio</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#aboutme" role="tab">About Me</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">Contact</a> </div>
-      <div class="container-fluid"> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-    </div>
-  </div>
+<div> 
+
   
   <!-- Content -->
-  <div class="navbar-custom"> <a class="fa fa-bars menu-icon" data-toggle="offcanvas" data-target=".sidebar"></a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-  <div id="content">
-    <div class="container-fluid">
-      <div class="container-fluid tab-content">
-        <div class="container-fluid fade show tab-pane active" id="digitalportfolio" role="tabpanel">
-          <h1 class="animation-title">Oriana Arnone</h1>
-          <p class="space animation-title"> UX - UI, Digital and Iteraction Designer&nbsp; </p>
-          <h4 class="text-right color-h4 animation-title">&nbsp;Digital Portfolio</h4>
-          <div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 border-0">
-				
-              <div class="col"  data-toggle="modal" data-target="#Phyleas" id="dp-Phyleas">
-                <div class="card margin-bottom pointer" > <img src="images/phyleas/Phyleas8.jpg"  class="card-img-top" alt="Phyleas-Cover">
-                  <div class="card-body m-0 p-0" >
-                    <p class="card-title m-1">Phyleas: your travel companion.</p>
+<div class="fixed-top px-md-5 px-sm-3 px-2 bg-page">
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-bottom border-dark px-md-5 px-sm-3 px-1">
+    <img class="px-2" src="images/logo-ori.png" width="auto" height="30px" alt="Oriana-logo"/>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse text-center py-5 py-lg-0" id="navbarTogglerDemo02">
+      <a class="mx-3 navbar-brand text-uppercase" href="index.html">Oriana Arnone</a>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item py-2 py-lg-0 mx-1">
+          <a class="nav-link px-3" href="about.html">About</a>
+        </li>
+        <li class="nav-item py-2 py-lg-0 mx-1">
+          <a class="nav-link px-4" href="contacts.html">Contacts</a>
+        </li>
+        <li class="nav-item py-2 py-lg-0 mx-3">
+          <button data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')" class="d-lg-block d-none btn btn-dark rounded px-4">Resume</button>
+          <a onclick="window.open('files/Oriana-Arnone_CV2021.pdf')"class="nav-link px-4 d-lg-none">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<div class="px-md-5 px-sm-3 px-2" id="content">
+  <div class="container-fluid px-md-5 px-sm-3 px-2">
+    <div class="pt-5 mt-5 row px-md-5 px-sm-3 px-2 align-items-end">
+      <div class="col-12 col-lg-6">
+        <div class="d-flex align-items-end">
+          <img class="px-2 animation-title" src="orianarnone.png" width="auto" height="130px" alt="Oriana-picture"/>
+          <span class="animation-title"> Hello, I'm Oriana Arnone</span>
+        </div>
+        <h1 class="animation-title py-3">UX - UI, Digital &<br>Iteraction Designer</h1>
+      </div>
+      <div class="col-12 col-lg-6">
+        <hr class="animation-title w-25 ml-0 d-none d-lg-block" style="border-top:3px solid black;">
+        <hr class="animation-title w-50 ml-0 d-lg-none" style="border-top:3px solid black;">
+       <p class="animation-title">I’m a versatile designer with strong problem solving skills. I care about the details and I aim to creat effective, intuitive and easy to use interfaces. I like  prototyping - it helps me think throung interaction and new possibilities.<br> 
+          I’m an empathetic person with a technical and  logical mindset. I like to work with ML, AI, HTML, CSS and JS.
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="px-md-5 px-sm-3 px-2" id="content">
+    <div class="container-fluid px-md-5 px-sm-3 px-2">
+      <div class="pt-5 mt-5 row px-md-5 px-sm-3 px-2 align-items-end">
+        <div class="col-12">
+            <span class="animation-title"> Case Studies </span> <span class="animation-title"> Personal works </span>
+        </div>
+        <div class="col-12">
+          <hr class="animation-title w-100 ml-0" style="border-top:2px solid black;">
+          <span class="animation-title"> Filter by: </span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="px-md-5 px-sm-3 px-2" id="content">
+    <div class="container-fluid px-md-5 px-sm-3 px-2">
+      <div class="container-fluid px-md-5 px-sm-3 px-2">
+          <div class="">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-2 border-0">
+              <a href="phyleas.html">
+                <div class="col" id="dp-Phyleas">
+                  <div class="card margin-bottom pointer" > <img src="images/phyleas/Phyleas8.jpg"  class="card-img-top" alt="Phyleas-Cover">
+                    <div class="card-body m-0 p-0" >
+                      <p class="card-title m-1">Phyleas: your travel companion.</p>
+                    </div>
                   </div>
-                </div>
+              
               </div>
+            </a>
               <div class="col"  data-toggle="modal" data-target="#Mybubble" id="dp-Mybubble">
                 <div class="card margin-bottom pointer"> <img src="images/mybubble/Mybubble1.jpg"  class="card-img-top" alt="Mybubble-cover">
                   <div class="card-body m-0 p-0">
@@ -125,62 +169,7 @@
             </div>
           </div>
           
-          <!-- Phyleas -->
-          <div class="modal fade " id="Phyleas" tabindex="-1" role="dialog" aria-labelledby="ModalPhyleas" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Phyleas</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> We had to ideate an innovative service to <strong>give more meaning to the transportation experience</strong> in public transports. After research and analysis on commuters, we thought about a mobile application that has the role of a <strong>companion</strong> and gives instructions to commuters through earphones. <br>
-                        <br>
-                        The application provides the right information at the right moment by telling the user about delays, cancellations, and walking time. During the time the user spends on public transportation, it will also suggest and play for him some audiobooks or music for the estimated while.<br>
-                        <br>
-                        The <strong>application will self learn the user’s habits</strong> having access to his GPS location, calendar, transportation timetables, and personal taste of music and audiobook in order to suggest to the user when he should leave home and how he can <strong>productively spend time on the public transportation.</strong> We created a storyboard, an action diagram, a system map, and a business model canvas to describe the service.<br>
-                        <br>
-                        After the course, I decided to continue the project. <strong>I designed my vision of the mobile application</strong> through maps, interaction study, wireframes, style, UX, and UI.</p>
-                    </div>
-                    <img src="images/phyleas/Phyleas1.jpg" class="container-fluid padding-images-modal" alt="Phyleas1">
-                    <div>
-                      <p class="modal-subtitle text-center"> User Information Flow </p>
-                      <p class="modal-subtitle-bottom text-about"> Me and my teamates analyzed different type of user informations. In the schema below, we were able to translate user sources into different design opportunities. In this way we could continue in the framing of the service through maps, for example the system map, very userful to understand information, material and financial flow. </p>
-                    </div>
-
-                    <img src="images/phyleas/Phyleas3.jpg"  class="container-fluid padding-images-modal " alt="Phyleas3">
-                    
-                    <div>
-                      <p class="modal-subtitle text-center"> System map </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/phyleas/Phyleas4.jpg"  class="container padding-images-modal-wbg" alt="Phyleas4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Consequences and possible improvements </p>
-                      <p class="modal-subtitle-bottom text-about"> In this part of the project we tought about the consequences of our service in terms of Self-perception, Actions and interpersonal relationship.Our critical theme was the automation of actions and services through the use of data. <br>
-                        After the exploration of the consequences we though about possible improvements. </p>
-                    </div>
-                    <img src="images/phyleas/Phyleas6.jpg"  class="container-fluid padding-images-modal " alt="Phyleas6"> <img src="images/phyleas/Phyleas5.jpg"  class="container-fluid padding-images-modal " alt="Phyleas5">
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/phyleas/Phyleas7.jpg"  class="container-fluid padding-images-modal " alt="Phyleas7">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-                    <img src="images/phyleas/Phyleas9.jpg"  class="container-fluid padding-images-modal " alt="Phyleas9">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of User Experience Design <br>
-                        Concept: November 2018 - December 2018 with: Azzolin, Hoogen, Shahriari, Xu,
-                        Zheng.<br>
-                        App prototype, wireframes and graphics: June 2020 designed by myself. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
+          
           
           <!-- Mybubble -->
           <div class="modal fade " id="Mybubble" tabindex="-1" role="dialog" aria-labelledby="ModalMybubble" aria-hidden="true">
@@ -682,8 +671,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="container-fluid fade tab-pane padding-about" id="aboutme" role="tabpanel" >
+        
+        <div class="container-fluid fade padding-about" id="aboutme" >
           <div class="col-12 container-photo-text text-center">
             <div class="container mx-auto"> <img class="align-self-center profile-img text-center" src="images/Oriana-Arnone.png"  alt="Oriana-Arnone-Profile">
               <div class="media-body">
@@ -692,36 +681,9 @@
               </div>
             </div>
           </div>
-          <div class="container-fluid text-center text-about border-top">
-            <div class="margin-top padding-text">
-              <p> I studied Digital and Interaction Design at Politecnico di Milano. <br>
-                I did my master's thesis about developing tools to enable <strong>User Experience</strong> Designer to work on projects based on Artificial Intelligence and <strong>Machine Learning</strong> technologies.<br>
-                <br>
-                I worked in Intesa San Paolo as a Digital Analyst on two project. The first one was an international project where I had the opportunity to improve my <strong>problem solving</strong> skills and practice english. The latter was the supervision of the testing phase of Inbiz mobile application. <br>
-                <br>
-                I also worked in Gruppo Mediaset as <strong>UCD Researcher and UX Designer</strong>. I collaborated with different figures about innovative solutions that imply Guppo Mediaset's Hyper360 technology. </p>
-            </div>
-            <div class="padding-bottom margin-bottom padding-text">
-              <div class="row row-cols-1 row-cols-md-2">
-                <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list"  onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> </div>
-                <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-              </div>
-            </div>
-          </div>
+
         </div>
-        <div class="container-fluid fade tab-pane padding-about text-center" id="contact" role="tabpane">
-          <div class="col-12">
-            <h2 class="about-title margin-top">Get in touch</h2>
-            <p class="about-subtitle margin-top">Send me and email at <a href="mailto:oriana.arnone@gmail.com" class="social-contact"> <strong>oriana.arnone@gmail.com</strong> </a> <br>
-              <br>
-              or visit my <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="social-contact"> <strong>linkedin profile</strong></a> </p>
-            <div class="margin-top"> <img class="align-self-center contact-image" src="files/envelope.png" alt="envelope-icon"> </div>
-            <div class="row row-cols-1 row-cols-md-2 margin-top margin-bottom padding-text">
-              <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> </div>
-              <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </div>
   </div>

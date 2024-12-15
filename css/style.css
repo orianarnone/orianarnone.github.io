@@ -8,58 +8,89 @@ body {
   font-size: 16px;
 }
 
-.title, h1, h2, h3, h4, h5 {
+.title, .modal-title, .modal-subtitle, h1, h2, h3, h4, h5 {
     font-family: "Abril Fatface", serif;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  .fw-extralight {
+.fw-extralight {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 200;
     font-style: normal;
-  }
+}
 
-  .fw-light {
+.fw-light {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 300;
     font-style: normal;
-  }
+}
 
-  .fw-regular {
+.fw-regular {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-  }
+}
 
-  .fw-medium {
+.fw-medium {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 500;
     font-style: normal;
-  }
+}
 
-  .fw-semibold {
+.fw-semibold {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }
+}
 
-  .fw-bold {
+.fw-bold {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 700;
     font-style: normal;
-  }
+}
 
-  .fw-black {
+.fw-black {
     font-family: "Manrope", serif;
     font-optical-sizing: auto;
     font-weight: 800;
     font-style: normal;
-  }
+}
   
+.bg-page{
+    background-color: #F3EBE4;
+}
+
+.rounded{
+    border-radius: 999px !important;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-light .navbar-toggler {
+    border:none;
+  }
+
+  
+@media (max-width: 575.98px) { 
+}
+  
+@media (max-width: 767.98px) { ... }
+  
+@media (max-width: 991.98px) { ... }
+  
+@media (max-width: 1199.98px) { 
+    
+}
+  
+@media (max-width: 1399.98px) { 
+   
+}
