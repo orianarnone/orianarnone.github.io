@@ -1,741 +1,328 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
+
 <head>
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>Oriana Arnone - UX, UI Designer</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
 <meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
-<meta name="description" content="Personal website of Oriana Arnone. I'm a UX (user experience) - UI (user interfaces), Digital and Interaction Designer. Have a look to my portfolio and contact me.">
+<meta name="description" content="Personal website of Oriana Arnone, UX/UI, Digital and Interaction Designer. Here you can find my resume and my portfolio with a selection of projects.">
 
-<!-- Bootstrap -->
+<!-- CSS -->
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
-<link href="css/CSS-nuovo-sito.css" rel="stylesheet" type="text/css">
-<link href="css/CSS-modal.css" rel="stylesheet" type="text/css">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" type="image/png" href="/images/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/images/favicon.svg" />
+<link rel="shortcut icon" href="/images/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="OA" />
+<link rel="manifest" href="/images/site.webmanifest" />
 
+<!-- scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
 </head>
 
-<body >
-<div id="viewport"> 
-  
-  <!-- Sidebar -->
-  <div id="sidebar" class="text-center">
-    <div class="sidebar-hide">
-      <div class="text-center"><img src="images/Profile Picture.png" width="auto" height="70px" alt="Oriana-logo"/> &nbsp;</div>
-      <div>
-        <p class="padding-bottom">&nbsp;</p>
-      </div>
-    </div>
-    <div class="sidebar-offcanvas" id="sidebar-check">
-      <div class="list-group text-center" id="list-tab" role="tablist"> <a class="list-group-item list-group-item-action active" data-toggle="list" href="#digitalportfolio" role="tab">Digital Portfolio</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#aboutme" role="tab">About Me</a> <a class="list-group-item list-group-item-action" data-toggle="list" href="#contact" role="tab">Contact</a> </div>
-      <div class="container-fluid"> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> <a class="download-pdf mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-    </div>
-  </div>
+<body>
+<div> 
+
   
   <!-- Content -->
-  <div class="navbar-custom"> <a class="fa fa-bars menu-icon" data-toggle="offcanvas" data-target=".sidebar"></a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-  <div id="content">
-    <div class="container-fluid">
-      <div class="container-fluid tab-content">
-        <div class="container-fluid fade show tab-pane active" id="digitalportfolio" role="tabpanel">
-          <h1 class="animation-title">Oriana Arnone</h1>
-          <p class="space animation-title"> UX - UI, Digital and Iteraction Designer&nbsp; </p>
-          <h4 class="text-right color-h4 animation-title">&nbsp;Digital Portfolio</h4>
-          <div>
-            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 border-0">
-				
-              <div class="col"  data-toggle="modal" data-target="#Phyleas" id="dp-Phyleas">
-                <div class="card margin-bottom pointer" > <img src="images/phyleas/Phyleas8.jpg"  class="card-img-top" alt="Phyleas-Cover">
-                  <div class="card-body m-0 p-0" >
-                    <p class="card-title m-1">Phyleas: your travel companion.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Mybubble" id="dp-Mybubble">
-                <div class="card margin-bottom pointer"> <img src="images/mybubble/Mybubble1.jpg"  class="card-img-top" alt="Mybubble-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">My Bubble: UX of a bank mobile app.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Myni" id="dp-Myni">
-                <div class="card margin-bottom pointer"> <img src="images/myni/Myni1.jpg" class="card-img-top" alt="Myni-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Myni: emotions and little expenses.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Movo" id="dp-Movo">
-                <div class="card margin-bottom pointer"> <img src="images/movo/Movo1.jpg" class="card-img-top" alt="Movo-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Movo: innovative time management.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Eggup" id="dp-Eggup">
-                <div class="card margin-bottom pointer"> <img src="images/eggup/Eggup1.jpg" class="card-img-top" alt="Eggup-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">EGGup: AR app and IoT device.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Learn" id="dp-Learn">
-                <div class="card margin-bottom pointer"> <img src="images/360learn/Learn1.jpg" class="card-img-top" alt="360Learn-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">360Learn: interactive 360videos platform.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Trenord" id="dp-Trenord">
-                <div class="card margin-bottom pointer"> <img src="images/trenord/Trenord1.jpg" class="card-img-top" alt="Trenord-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Trenord website redesign.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Anagrafe" id="dp-Anagrafe">
-                <div class="card margin-bottom pointer"> <img src="images/anagrafe/Anagrafe1.jpg" class="card-img-top" alt="Anagrafe-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Registry office website redesign.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Lotte" id="dp-Lotte">
-                <div class="card margin-bottom pointer"> <img src="images/lotte/Lotte1.jpg" class="card-img-top" alt="Lotte-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Discover Lotte: immersive exhibition.</p>
-                  </div>
-                </div>
-              </div>
-              <div class="col"  data-toggle="modal" data-target="#Buckets" id="dp-Buckets">
-                <div class="card margin-bottom pointer"> <img src="images/buckets/Bucket1.jpg" class="card-img-top" alt="Buckets-cover">
-                  <div class="card-body m-0 p-0">
-                    <p class="card-title m-1">Smart Buckets: enabling interfaces.</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Phyleas -->
-          <div class="modal fade " id="Phyleas" tabindex="-1" role="dialog" aria-labelledby="ModalPhyleas" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Phyleas</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> We had to ideate an innovative service to <strong>give more meaning to the transportation experience</strong> in public transports. After research and analysis on commuters, we thought about a mobile application that has the role of a <strong>companion</strong> and gives instructions to commuters through earphones. <br>
-                        <br>
-                        The application provides the right information at the right moment by telling the user about delays, cancellations, and walking time. During the time the user spends on public transportation, it will also suggest and play for him some audiobooks or music for the estimated while.<br>
-                        <br>
-                        The <strong>application will self learn the user’s habits</strong> having access to his GPS location, calendar, transportation timetables, and personal taste of music and audiobook in order to suggest to the user when he should leave home and how he can <strong>productively spend time on the public transportation.</strong> We created a storyboard, an action diagram, a system map, and a business model canvas to describe the service.<br>
-                        <br>
-                        After the course, I decided to continue the project. <strong>I designed my vision of the mobile application</strong> through maps, interaction study, wireframes, style, UX, and UI.</p>
-                    </div>
-                    <img src="images/phyleas/Phyleas1.jpg" class="container-fluid padding-images-modal" alt="Phyleas1">
-                    <div>
-                      <p class="modal-subtitle text-center"> User Information Flow </p>
-                      <p class="modal-subtitle-bottom text-about"> Me and my teamates analyzed different type of user informations. In the schema below, we were able to translate user sources into different design opportunities. In this way we could continue in the framing of the service through maps, for example the system map, very userful to understand information, material and financial flow. </p>
-                    </div>
 
-                    <img src="images/phyleas/Phyleas3.jpg"  class="container-fluid padding-images-modal " alt="Phyleas3">
-                    
-                    <div>
-                      <p class="modal-subtitle text-center"> System map </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/phyleas/Phyleas4.jpg"  class="container padding-images-modal-wbg" alt="Phyleas4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Consequences and possible improvements </p>
-                      <p class="modal-subtitle-bottom text-about"> In this part of the project we tought about the consequences of our service in terms of Self-perception, Actions and interpersonal relationship.Our critical theme was the automation of actions and services through the use of data. <br>
-                        After the exploration of the consequences we though about possible improvements. </p>
-                    </div>
-                    <img src="images/phyleas/Phyleas6.jpg"  class="container-fluid padding-images-modal " alt="Phyleas6"> <img src="images/phyleas/Phyleas5.jpg"  class="container-fluid padding-images-modal " alt="Phyleas5">
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/phyleas/Phyleas7.jpg"  class="container-fluid padding-images-modal " alt="Phyleas7">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-                    <img src="images/phyleas/Phyleas9.jpg"  class="container-fluid padding-images-modal " alt="Phyleas9">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of User Experience Design <br>
-                        Concept: November 2018 - December 2018 with: Azzolin, Hoogen, Shahriari, Xu,
-                        Zheng.<br>
-                        App prototype, wireframes and graphics: June 2020 designed by myself. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Mybubble -->
-          <div class="modal fade " id="Mybubble" tabindex="-1" role="dialog" aria-labelledby="ModalMybubble" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">My Bubble</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> My Bubble is a new service fow new generation to manage money through a mobile application and an IoT Smart Cardholder. <br>
-                        <br>
-                        Banca Mediolanum asked us to choose one of four topics, and define our brief.
-                        So, we decided to focus on Millennials to help them <strong>mindfully managing money</strong>, building awareness at the moment of payment, and decreasing the stress of checking expenses. In this way, they can achieve their financial goals and understand themselves better.
-                        After the research, interviews, analysis, and personas, we started the ideation phase through “how might we” questions. We combined some ideas, defined a solution, and created two journey maps. Our system is composed of an application and a smart cardholder needed for people that used to pay with the card. It has a smart fabric where a line appears at each purchase.
-                        People that used to pay with the phone have to unlock the payment using the app. They have to take money from the bubble of the homepage (their monthly budget). In this way the user can <strong>build awareness at the moment of the payment</strong>.<br>
-                        <br>
-                        At the end of the month, they can see the report, discover which Avatar represents better their spending personality, and see some suggestions to change their spending behavior and take more control of their financial situation.</p>
-                    </div>
-                    <img src="images/mybubble/Mybubble2.jpg" class="container-fluid padding-images-modal" alt="Mybubble1">
-                    <div>
-                      <p class="modal-subtitle text-center"> Personas </p>
-                      <p class="modal-subtitle-bottom text-about"> Interviews, digital ethnography, observation, and shadowing are useful methods to analyze the user, find problems, and collect insights.
-                        The insights are used to create personas that will set the values, goals, needs, and requirements of the project. </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/mybubble/Mybubble3.jpg"  class="container padding-images-modal-wbg" alt="Mybubble3"> </div>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/mybubble/Mybubble4.jpg"  class="container padding-images-modal-wbg" alt="Mybubble4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Customer journey </p>
-                      <p class="modal-subtitle-bottom text-about"> The ideation phase was done through how might we questions, crazy 8, and brainstorming. After the idea selection, the concept was defined through a storyboard, and 2 different journey maps: one for the user that pays with the phone and the other about the user that pays with a card. </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/mybubble/Mybubble5.jpg"  class="container padding-images-modal-wbg" alt="Mybubble5"> </div>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/mybubble/Mybubble6.jpg"  class="container padding-images-modal-wbg" alt="Mybubble6"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/mybubble/Mybubble7.jpg"  class="container-fluid padding-images-modal " alt="Mybubble7">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-
-                    <img src="images/mybubble/Mybubble8.jpg"  class="container-fluid padding-images-modal " alt="Mybubble8"> <img src="images/mybubble/Mybubble9.jpg"  class="container-fluid padding-images-modal " alt="Mybubble9"> <img src="images/mybubble/Mybubble10.jpg"  class="container-fluid padding-images-modal " alt="Mybubble10">
-
-                     
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Professional workshop with Banca Mediolanum <br>
-                        12th february 2020 - 19th february 2020<br>
-                        With: Nikulina, Zhang, Zhou, Liao, Ye. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Myni -->
-          <div class="modal fade " id="Myni" tabindex="-1" role="dialog" aria-labelledby="ModalMyni" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Myni</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> We focused on the relationship between the new generations (x and y) and small expenses. We did researches about users and their relationship with money. We use different tools: interviews, observations, questionnaires, customer journey maps, and personas. We understood that the <strong>trigger of the expenses</strong> is not the means but <strong>is the amount</strong>. In one month the small expenses became really big and no one remembers the experience linked to that purchase because it was not important.<br>
-                        <br>
-                        So we decided to give value to the little purchases and link them to the user emotion using a smart bracelet. The system will know the feeling of the user thanks to different sensors and data gathering. Knowing the buying habits and the emotions, the system can suggest some adjustments to increase the quality and bring serenity to users’ lives. The system is composed of a social media campaign, a landing page, a smart bracelet, and an application. The bracelet allows users to have real-time feedback about the purchase. <br>
-                        <br>
-                        It, also, allow them to <strong>be more conscious about the expenses</strong>. 
-                        At every moment the user can see the daily amount of purchases and the real-time emotion. The feedback is given by colored led.</p>
-                    </div>
-                    <img src="images/myni/Myni2.jpg" class="container-fluid padding-images-modal" alt="Myni2">
-                    <div>
-                      <p class="modal-subtitle text-center"> User Actions Flow </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/myni/Myni3.jpg"  class="container padding-images-modal-wbg" alt="Myni3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Style and Graphics </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/myni/Myni4.jpg"  class="container padding-images-modal-wbg" alt="Myni4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Application Sections </p>
-                      <p class="modal-subtitle-bottom text-about"> The mobile application is composed of different sections: emotions, places, profile and reax. The emotion part is divided in hystory and past actions, current state and present actions, budget and savings for future actions. </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/myni/Myni5.jpg"  class="container padding-images-modal-wbg" alt="Myni5"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Smart bracelet prototype </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/myni/Myni6.jpg"  class="container padding-images-modal-wbg" alt="Myni6"> </div>
-                    </div>
-                    <p class="modal-subtitle text-center"> Render and Final User Interface </p>
-                    <img src="images/myni/Myni7.jpg"  class="container-fluid padding-images-modal " alt="Myni7"> <img src="images/myni/Myni8.jpg"  class="container-fluid padding-images-modal " alt="Myni8">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Interaction Systems Studio <br>
-                        February 2019 - June 2019<br>
-                        With: Autori, Catani, Corradini, Giuditta, Venturis. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Movo -->
-          <div class="modal fade " id="Movo" tabindex="-1" role="dialog" aria-labelledby="ModalMovo" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Movo</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> A classic way to measure time is not efficient enough when people are focused on doing something else. Very often, they lose the sense of time. Movo provides users a new way to organize their schedules in order to be more productive and efficient. Differently from a phone alarm clock, it is not possible to delay or switch the reminders off. Movo itself is a <strong>visual reminder</strong> telling that time is passing by. Movo is a physical object that catches the attention also when the user is busy doing something else. <br>
-                        <br>
-                        Movo is mainly composed of two parts: the mobile application and the physical object.
-                        The product contains a <strong>micro bit, two LEDs, a buzzer</strong>. The shell was 3D printed. The mobile application was <strong>developed with MIT app inventor</strong> and is connected to the product through low energy Bluetooth. In the app, the user can set 3 reminders for each event, and the object will show visuals and sounds accordingly to each reminder. The less time the user has and the more insistent Movo becomes.<br>
-                        <br>
-                        The time cognition is presented in an innovative way and the <strong>closure interaction adds a sense of relief</strong>. To turn off Movo, it has to swing, so the user has only to push it. </p>
-                    </div>
-                    <img src="images/movo/Movo2.jpg" class="container-fluid padding-images-modal" alt="Movo2">
-                    <div>
-                      <p class="modal-subtitle text-center"> User Journey map </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/movo/Movo3.jpg"  class="container padding-images-modal-wbg" alt="Movo3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> User Process Flow </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/movo/Movo4.jpg"  class="container padding-images-modal-wbg" alt="Movo4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Final Product and Mobile Application </p>
-                      <p class="modal-subtitle-bottom text-about"> Movo is mainly composed of two parts: the mobile application and the physical object.
-                        The product contains a <strong>micro bit, two LEDs, a buzzer</strong>. The shell was 3D printed. The mobile application was <strong>developed with MIT app inventor</strong> and is connected to the product through low energy Bluetooth. </p>
-                    </div>
-                    <img src="images/movo/Movo5.jpg"  class="container-fluid padding-images-modal " alt="Movo5"> <img src="images/movo/Movo6.jpg"  class="container-fluid padding-images-modal " alt="Movo6"> <img src="images/movo/Movo7.jpg"  class="container-fluid padding-images-modal " alt="Movo7">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Hardware & Software for Design <br>
-                        September 2018 - December 2018<br>
-                        With: Colombo, Ceriani, Zhao. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Eggup -->
-          <div class="modal fade " id="Eggup" tabindex="-1" role="dialog" aria-labelledby="ModalEggup" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">EGGup</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> The waste of food is an involuntary habit that is increasing each year. The willingness of healthy foods, overbuying, and overcooking practices are only a few causes of this huge phenomenon. <strong>Eggs are one of the most wasted foods</strong> and they have high environmental impacts in terms of water, land, and resource consumption. <br>
-                        <br>
-                        EGGup is a system designed with the goal of <strong>rise awareness on egg waste</strong> for children and parents. The system is composed of a <strong>smart egg tray</strong>, a mobile application for adults, and a mobile application for children. The tray is used to store the eggs and to provide users useful information about the eggs through colors. <br>
-                        <br>
-                        The <strong>main mobile application</strong> is used to configure the egg tray, manage the eggs, know how many eggs the user has in the fridge at every moment, also at the grocery store, and configure the children app. <br>
-                        <br>
-                        <strong>EGGYup</strong> is a mobile application designed to raise awareness about the <strong>value of eggs</strong>. There are 3 ways to gain points: playing a memory game with the app and the eggs tray, answering questions about characters' problems, and finding eggs in AR. </p>
-                    </div>
-                    <img src="images/eggup/Eggup2.jpg" class="container-fluid padding-images-modal" alt="Eggup2">
-                    <div>
-                      <p class="modal-subtitle text-center"> Moodboard, sketch, 3D model </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal animation-title">
-                      <div class="container-fluid border"> <img src="images/eggup/Eggup3.jpg"  class="container padding-images-modal-wbg" alt="Eggup3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Augmented Reality App </p>
-                      <p class="modal-subtitle-bottom text-about"> The part of the mobile application related to the Augmented Reality was entirely developed in Unity. The Vuforia library was essential to create an AR interaction that was target based. The markers were  completely personalized. The 3D models were created with Inventor and the animation of every single piece was done with Unity. The 2D UI was created with Illustrator and then animated in Unity. </p>
-                    </div>
-                    <img src="images/eggup/Eggup4.jpg"  class="container-fluid padding-images-modal " alt="Eggup4">
-                    <div>
-                      <p class="modal-subtitle text-center"> App Architectures </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal animation-title">
-                      <div class="container-fluid border"> <img src="images/eggup/Eggup5.jpg"  class="container padding-images-modal-wbg" alt="Eggup5"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Style and Graphics </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal animation-title">
-                      <div class="container-fluid border"> <img src="images/eggup/Eggup6.jpg"  class="container padding-images-modal-wbg" alt="Eggup6"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/eggup/Eggup7.jpg"  class="container-fluid padding-images-modal " alt="Eggup7">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-                    <img src="images/eggup/Eggup8.jpg"  class="container-fluid padding-images-modal " alt="Eggup8">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Virtual and Phisical Prototyping<br>
-                        February 2020 - July 2020<br>
-                        Individual work. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Learn -->
-          <div class="modal fade " id="Learn" tabindex="-1" role="dialog" aria-labelledby="ModalLearn" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">360 Learn</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> During the internship in Gruppo Mediaset, I worked with some colleagues about defining scenarios that can <strong></strong>enhance the Hyper360 technology developed by Gruppo Mediaset. 
-                        The platform allows users to make VR and 360° videos interactive by placing images, graphics, buttons, 2D videos, maps inside the video. <br>
-                        <br>
-                        We defined user-centered research through observations, reviews, and questionnaires. We analyzed the insights, we searched use cases for the technology, we brainstorm about possible industries were to apply Hyper360.<br>
-                        <br>
-                        We thought about <strong>two scenarios</strong> where this technology can be useful: one related to the <strong>media sector</strong> and one related to the <strong>educational sector</strong>. The first one was about enhancing advertisement through gamification. The second one was about increasing the learning experience in schools. <br>
-                        <br>
-                        The tutors of the internship chose the second scenario, so we designed a system useful <strong>for teachers</strong> to schedule lectures, and assign homework, and it is useful <strong>for students</strong> to have an immersive experience, learn faster and better, and pay more attention to lectures. </p>
-                    </div>
-                    <img src="images/360learn/Learn2.jpg" class="container-fluid padding-images-modal" alt="Learn2">
-                    <div>
-                      <p class="modal-subtitle text-center"> Brainstorming in Miro </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/360learn/Learn3.jpg"  class="container padding-images-modal-wbg" alt="Learn3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Hyper360°: make videos interactive </p>
-                    </div>
-                    <img src="images/360learn/Learn4.jpg"  class="container-fluid padding-images-modal " alt="Learn4">
-                    <div>
-                      <p class="modal-subtitle text-center"> Teacher's side </p>
-                    </div>
-                    <img src="images/360learn/Learn5.jpg"  class="container-fluid padding-images-modal " alt="Learn5"> <img src="images/360learn/Learn6.jpg"  class="container-fluid padding-images-modal " alt="Learn6">
-                    <p class="modal-subtitle text-center"> Student's side </p>
-                    <img src="images/360learn/Learn7.jpg"  class="container-fluid padding-images-modal " alt="Learn7"> <img src="images/360learn/Learn8.jpg"  class="container-fluid padding-images-modal " alt="Learn8">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Internship in Gruppo Mediaset<br>
-                        May 2020 - June 2020<br>
-                        With: Azzolin and Picardi. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Trenord -->
-          <div class="modal fade " id="Trenord" tabindex="-1" role="dialog" aria-labelledby="ModalTrenord" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Trenord</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> The main aim of Trenord is to offer an adequate answer to the raising mobility demand of Lombardy citizens. All the train information is given by website and mobile application, the latter was recently redesigned to improve the usability. <strong>The website</strong>, on the other hand, <strong>needs to be redesigned</strong>. <br>
-                        <br>
-                        We did research and analysis. We understood that the most used services are: buy a ticket, check train status and check the train schedule. We <strong>analyzed in detail every step</strong> of each task and we did a schema of the current page architecture. We analyzed the website and the application of 3 competitors: Trenitalia, Italo, and FSS. We discovered some useful <strong>insights</strong> and then we analyzed each website and mobile application based on our parameters.<br>
-                        <br>
-                        After that, we started the redesign. First of all, we designed a <strong>new architecture</strong> to solve all the problems that we encounter during the analysis of Trenord website, then we started producing paper mockups. Based on them we define the website wireframes and then we finalized the style (fonts, colors palette, shapes).
-                        Finally, we developed all the pages of our tasks using Adobe XD. </p>
-                    </div>
-                    <img src="images/trenord/Trenord2.jpg" class="container-fluid padding-images-modal" alt="Trenord2">
-                    <div>
-                      <p class="modal-subtitle text-center"> User Tasks Analysis </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/trenord/Trenord3.jpg"  class="container padding-images-modal-wbg" alt="Trenord3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Style and Graphics </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/trenord/Trenord4.jpg"  class="container padding-images-modal-wbg" alt="Trenord4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/trenord/Trenord5.jpg"  class="container-fluid padding-images-modal " alt="Trenord5">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-                    <img src="images/trenord/Trenord6.jpg"  class="container-fluid padding-images-modal " alt="Trenord6">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Interactive System Usability Design<br>
-                        September 2019 - February 2020<br>
-                        With: Bertazzoli, Colombo, Lasalvia, Picardi. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Anagrafe -->
-          <div class="modal fade " id="Anagrafe" tabindex="-1" role="dialog" aria-labelledby="ModalAnagrafe" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Turin Registry office</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> The Registry office of Turin collaborated with Politecnico di Milano to increase the quality of its services. We conducted some research through <strong>observations and interviews at the registry office</strong>, desk research, and digital ethnography.<br>
-                        <br>
-                        We discovered some problems and we generated different service implementations starting from our persona needs. We focus on the <strong>website redesign with a chatbot integration</strong> to help users through the procedure in the best way possible. This solution gives the possibility to use a self-service machine to take documents at the office, without standing in line and talking to the employee.<br>
-                        <br>
-                        We analyzed the website's current architecture, created a new one and we produced
-                        paper mockups. Based on the wireframes we finalized the <strong>first prototype with Adobe
-                        XD and we test it</strong>. Based on the feedback, we improved it, we did a <strong>second usability
-                        test</strong>, then some adjustments until the website's final version and the <strong>chatbot innovative interaction</strong>. <br>
-                        <br>
-                        Then we developed the <strong>website mobile version and tested it</strong>. The feedbacks about the guided procedure of the website and the interaction with the chatbot were positive and enthusiastic. </p>
-                    </div>
-                    <img src="images/anagrafe/Anagrafe2.jpg" class="container-fluid padding-images-modal" alt="Anagrafe2">
-                    <div>
-                      <p class="modal-subtitle text-center"> Current architecture analysis </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/anagrafe/Anagrafe3.jpg"  class="container padding-images-modal-wbg" alt="Anagrafe3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Brainstorming and technology matrix </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/anagrafe/Anagrafe4.jpg"  class="container padding-images-modal-wbg" alt="Anagrafe4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Chatbot innovation </p>
-                      <p class="modal-subtitle-bottom text-about"> The technology matrix helped us discover the most useful technology to make the Turin registry office more efficient.  From the research, we find out that the change of residence task needs constant assistance. A personal assistant as a chatbot was a good solution. Ian, the chatbot, is innovative because its behavior is like a real assistant. 
-                        Natural Language Processing technology needs a lot of previous work, as good quality data gathering and understanding of the procedure. It couldn’t be our short term solution. We opted for multiple choice questions because the user feels more confident. 
-                        The innovative part of this chatbot is redirecting. As a physical person, Ian answers the user’s questions and then brings him to the right page, according to what he wants to do. </p>
-                    </div>
-                    <img src="images/anagrafe/Anagrafe5.jpg"  class="container-fluid padding-images-modal " alt="Anagrafe5">
-                    <div>
-                      <p class="modal-subtitle text-center"> Style and Graphics </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/anagrafe/Anagrafe6.jpg"  class="container padding-images-modal-wbg" alt="Anagrafe6"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Wireframes </p>
-                    </div>
-                    <img src="images/anagrafe/Anagrafe7.jpg"  class="container-fluid padding-images-modal " alt="Anagrafe7">
-                    <p class="modal-subtitle text-center"> Final User Interface </p>
-                    <img src="images/anagrafe/Anagrafe8.jpg"  class="container-fluid padding-images-modal " alt="Anagrafe8">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Digital Design Studio<br>
-                        February 2019 - June 2019<br>
-                        With: Colombo, Picardi, Shahriari, Zheng. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Lotte -->
-          <div class="modal fade " id="Lotte" tabindex="-1" role="dialog" aria-labelledby="ModalLotte" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Discover Lotte: immersive exhibition.</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> Charlotte "Lotte" Reiniger (1899 – 1981) was a <strong>German film director</strong> and the pioneer of silhouette animation. Her best known films are The Adventures of Prince Achmed (1926) and Papageno (1935). She is also noted for having devised the first form of a <strong>multiplane camera</strong> with which she made more than 40 films.<br>
-                        <br>
-                        We decided to structure the exhibition into <strong></strong>4 parts: introduction to Lotte, shadow theatre, immersive space, and interactive “do it yourself” part at the end. The <strong>introduction to Lotte</strong> consists of a video about her invention projected on a curved wall. The next part is a <strong>shadow theatre</strong>: a vertical 1:1 scale of her layers technique to better explain to visitors her concept. The visitors can download and use a mobile app to record a video of them acting in that place.<br>
-                        <br>
-                        The following part is the <strong>immersive space</strong> with some pillow in the center and her films
-                        projected on the ceiling. In addition, the vertical walls show some animations (birds, flowers, and leaves) that follow the visitors. When they come near the wall, it shows some information. In the last part, the <strong>user can use Lotte’s technics in first person</strong> thanks to a tablet application and the digitalized version of her multilayer camera. </p>
-                    </div>
-                    <img src="images/lotte/Lotte1.jpg" class="container-fluid padding-images-modal" alt="Lotte1">
-                    <div>
-                      <p class="modal-subtitle text-center"> Study of the space </p>
-                      <p class="modal-subtitle-bottom text-about"> The exhibition is composed of 4 main spaces: 1. the introductory part about Lotte's life and techniques. 2. The shadow theatre to experience in first person her animations. 3. The immersive spece where Lotte's movies are projected on the ceiling. 4. The interactive part where visitors can create their own movie using Lotte's techniques. </p>
-                    </div>
-                    <img src="images/lotte/Lotte2.jpg"  class="container-fluid padding-images-modal " alt="Lotte2"> <img src="images/lotte/Lotte3.jpg"  class="container-fluid padding-images-modal " alt="Lotte3">
-                    <div>
-                      <p class="modal-subtitle text-center"> Introductive video </p>
-                      <p class="modal-subtitle-bottom text-about"> At the entrance, there is a curved wall where a video about Lotte’s technique is projected. It explains to visitors how she created her silhouettes, how she builds the layers, and how she used her multilayer camera. 
-                        It illustrates every action and process that she took in order to create her animations. </p>
-                    </div>
-                    <img src="images/lotte/Lotte4.jpg"  class="container-fluid padding-images-modal " alt="Lotte4">
-                    <div>
-                      <p class="modal-subtitle text-center"> Shadow theatre and mobile application </p>
-                      <p class="modal-subtitle-bottom text-about"> The shadow theatre is composed of three different layers, stairs, and some objects. Visitors can understand her animation technique becoming the characters of this giant living animation. By downloading the mobile application, they can record their performance and save it. </p>
-                    </div>
-                    <img src="images/lotte/Lotte5.jpg"  class="container-fluid padding-images-modal " alt="Lotte5"> <img src="images/lotte/Lotte6.jpg"  class="container-fluid padding-images-modal " alt="Lotte6"> <img src="images/lotte/Lotte7.jpg"  class="container-fluid padding-images-modal " alt="Lotte7">
-                    <div>
-                      <p class="modal-subtitle text-center"> Immersive space </p>
-                      <p class="modal-subtitle-bottom text-about"> The immersive space brings the visitor inside her movies. Her films are projected on the ceiling and the room is full of pillows. 
-                        The vertical walls show birds, flowers, and leaves animations that follow the visitors. When they come near the wall, it shows some information about Lotte’s life. </p>
-                    </div>
-                    <img src="images/lotte/Lotte8.jpg"  class="container-fluid padding-images-modal " alt="Lotte8">
-                    <div>
-                      <p class="modal-subtitle text-center"> Interactive part: create your movie </p>
-                      <p class="modal-subtitle-bottom text-about"> In the last part, visitors can personalize the main character of Lotte’s movie through the tablet. 
-                        
-                        Then they can use the digitalized version of her multilayer camera to choose the foreground, midground, background, set the environment, and record the self-made animation.</p>
-                    </div>
-                    <img src="images/lotte/Lotte9.jpg"  class="container-fluid padding-images-modal " alt="Lotte9"> <img src="images/lotte/Lotte10.jpg"  class="container-fluid padding-images-modal " alt="Lotte10">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Digital Art <br>
-                        February 2019 - June 2019 <br>
-                        With: Kraanen, Picardi, Aggarwal, Cerrato, Shahriari, Nikulina. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Buckets -->
-          <div class="modal fade " id="Buckets" tabindex="-1" role="dialog" aria-labelledby="ModalBuckets" aria-hidden="true">
-            <div class="modal-dialog " role="document">
-              <div class="modal-content">
-                <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
-                <div class="modal-body">
-                  <div class="container-fluid padding-container-modal animation-title">
-                    <p class="modal-title text-center">Smart Buckets</p>
-                    <div class=" border-top">
-                      <p class="padding-text-modal text-about"> “Smart buckets” is an interactive system based on a set of <strong>smart containers</strong>, which are capable of recognizing the presence and the type of multiple objects inserted thanks to a scale system. The containers are connected to the “Smart room” ecosystem, but they are also equipped with led strips for giving feedback. The target group is <strong>children between 6 and 10 years old with various NDD severity</strong> rate and their therapists and teachers, So we decided to design also a tablet application to be used as a control panel.<br>
-                        <br>
-                        The design was guided by the user’s needs, so the main aspects of the system are:
-                        Ergonomics, Accessibility, Engagement, Safety, Extensibility, and Reliability.<br>
-                        <br>
-                        The dimensions are a good compromise between capacity and children’s usability, the bucket front panel can be removed giving access to wheelchair users, the bucket colored LEDs ensure <strong>clear feedback</strong> and children’s entertainment, the shape of the bucket is rounded and the electronic is hidden to children, the therapist can rapidly add an object to the system, without worrying to attach any tag to the object, the system is reliable to <strong>ensure a smooth experience for both children and therapists</strong>.</p>
-                    </div>
-                    <img src="images/buckets/Bucket2.png" class="container-fluid padding-images-modal" alt="Buckets2">
-                    <div>
-                      <p class="modal-subtitle text-center"> Stakeholders </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/buckets/Bucket3.jpg"  class="container padding-images-modal-wbg" alt="Buckets3"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> Interaction study of two scenarios </p>
-                    </div>
-                    <div class="container-fluid  padding-images-modal">
-                      <div class="container-fluid border"> <img src="images/buckets/Bucket4.jpg"  class="container padding-images-modal-wbg" alt="Buckets4"> </div>
-                    </div>
-                    <div>
-                      <p class="modal-subtitle text-center"> 3D model and physical object </p>
-                    </div>
-                    <img src="images/buckets/Bucket5.jpg" class="container-fluid padding-images-modal" alt="Buckets5">
-                    <div>
-                      <p class="modal-subtitle text-center"> Tablet application UI </p>
-                    </div>
-                    <img src="images/buckets/Bucket6.jpg" class="container-fluid padding-images-modal" alt="Buckets6">
-                    <div>
-                      <p class="modal-subtitle text-center"> Immersive environment </p>
-                    </div>
-                    <img src="images/buckets/Bucket7.jpg" class="container-fluid padding-images-modal" alt="Buckets7">
-                    <div>
-                      <p class="modal-subtitle-bottom text-center text-about"> Course of Advanced User Interfaces<br>
-                        September 2019 - February 2020<br>
-                        With: Valerio Colombo. </p>
-                    </div>
-                    <div> </div>
-                  </div>
-                </div>
-                <div class="modal-footer"> </div>
-              </div>
-            </div>
-          </div>
+<div class=" container-fluid mb-5 py-5">
+  <div class="position-fixed d-none d-md-block background-text title">Tech + Design</div>
+  <div class="container">
+    <div class="pt-5 mt-5 row px-2 align-items-end">
+      <div class="col-12 col-lg-6">
+        <div class="d-flex align-items-end">
+          <img class="px-2  " src="images/orianarnone.png" width="auto" height="130px" alt="Oriana-picture"/>
+          <span class=" "> Hello, I'm Oriana Arnone</span>
         </div>
-        <div class="container-fluid fade tab-pane padding-about" id="aboutme" role="tabpanel" >
-          <div class="col-12 container-photo-text text-center">
-            <div class="container mx-auto"> <img class="align-self-center profile-img text-center" src="images/Oriana-Arnone.png"  alt="Oriana-Arnone-Profile">
-              <div class="media-body">
-                <h2 class=" about-title">Oriana Arnone</h2>
-                <p class="about-subtitle">UX - UI, Digital and Iteraction Designer</p>
-              </div>
-            </div>
-          </div>
-          <div class="container-fluid text-center text-about border-top">
-            <div class="margin-top padding-text">
-              <p> I studied Digital and Interaction Design at Politecnico di Milano. <br>
-                I did my master's thesis about developing tools to enable <strong>User Experience</strong> Designer to work on projects based on Artificial Intelligence and <strong>Machine Learning</strong> technologies.<br>
-                <br>
-                I worked in Intesa San Paolo as a Digital Analyst on two project. The first one was an international project where I had the opportunity to improve my <strong>problem solving</strong> skills and practice english. The latter was the supervision of the testing phase of Inbiz mobile application. <br>
-                <br>
-                I also worked in Gruppo Mediaset as <strong>UCD Researcher and UX Designer</strong>. I collaborated with different figures about innovative solutions that imply Guppo Mediaset's Hyper360 technology. </p>
-            </div>
-            <div class="padding-bottom margin-bottom padding-text">
-              <div class="row row-cols-1 row-cols-md-2">
-                <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list"  onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> </div>
-                <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="container-fluid fade tab-pane padding-about text-center" id="contact" role="tabpane">
-          <div class="col-12">
-            <h2 class="about-title margin-top">Get in touch</h2>
-            <p class="about-subtitle margin-top">Send me and email at <a href="mailto:oriana.arnone@gmail.com" class="social-contact"> <strong>oriana.arnone@gmail.com</strong> </a> <br>
-              <br>
-              or visit my <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="social-contact"> <strong>linkedin profile</strong></a> </p>
-            <div class="margin-top"> <img class="align-self-center contact-image" src="files/envelope.png" alt="envelope-icon"> </div>
-            <div class="row row-cols-1 row-cols-md-2 margin-top margin-bottom padding-text">
-              <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_Portfolio2021.pdf')">Portfolio (pdf)</a> </div>
-              <div class="col"> <a class="download-pdf2 mx-auto" data-toggle="list" onclick="window.open('files/Oriana-Arnone_CV2021.pdf')">CV (pdf)</a> </div>
-            </div>
+        <h1 class="  py-3">UX - UI, Digital &<br>Interaction Designer</h1>
+      </div>
+      <div class="col-12 col-lg-6">
+        <hr class="border-3 w-25 ml-0 d-none d-lg-block border-top border-dark">
+        <hr class="border-3 w-50 ml-0 d-lg-none border-top border-dark">
+       <p class=" ">I’m a versatile designer with strong problem solving skills. I care about the details and I aim to creat effective, intuitive and easy to use interfaces. I like  prototyping - it helps me think throung interaction and new possibilities.<br> 
+          I’m an empathetic person with a technical and  logical mindset. I like to work with ML, AI, HTML, CSS and JS.
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+  
+  <div>
+  
+    
+    <div class="container-fluid px-md-5 px-sm-3 px-2">
+      <div class="py-3 px-md-5 px-sm-3 px-2 border-bottom border-dark">
+            <h4 class="  px-2"> Selected Projects </h4>
+      </div>
+    </div>
+    
+    <div class="px-md-5 px-sm-3 px-2 sticky-filters blur-background">
+    <div class="py-3 px-md-5 px-sm-3 px-2">
+      <div class="container-fluid px-2">
+        <div class="d-inline-flex align-items-center">
+          <span class="pr-3  "> Filter by: </span>
+          <div id="filter-buttons">
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="UX">UX</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="UI">UI</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Front End">Front End</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="AI">AI</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Service Design">Service Design</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Physical Prototype">Physical Prototype</button>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <footer>
-    <div class="container-fluid text-center"> Oriana Arnone.  |   UX - UI, Digital and Interaction Designer.<br>
-      <br>
-      &copy; Copyright 2021 orianarnone.com <br><br></div>
 
-      <div class="container-fluid text-center"  data-toggle="modal" data-target="#Cookie" id="dp-Cookie" style="text-decoration: underline; cursor: pointer;">Click here to change cookie consent
+  <div class="container mt-4 p-4 p-md-0">
+    <div id="projects">
+      <div>
+          <div>
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
+              <!--Phyleas-->
+              <div class="project-card" data-tags="UX,UI,Service Design">
+               <a href="projects/phyleas.html">
+                  <div class="p-2 pb-5" id="dp-Phyleas">
+                    <div class="card margin-bottom pointer" > 
+                      <img src="images/phyleas/Phyleas.png"  class="card-img-top" alt="Phyleas-Cover">
+                      <div class="card-body">
+                        <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Ui, Service Design</p>
+                        <h5 class="card-title">Phyleas: your travel companion.</h5>
+                          <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!--Myni-->
+              <div class="project-card" data-tags="UX,Physical Prototype">
+                <a href="projects/myni.html">
+                   <div class="p-2 pb-5" id="dp-Myni">
+                     <div class="card margin-bottom pointer" > 
+                       <img src="images/myni/Myni.png"  class="card-img-top" alt="Myni-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Physical Prototype</p>
+                         <h5 class="card-title">Myni: emotions and little expenses.</h5>
+                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
+               <!--MyBubble-->
+               <div class="project-card" data-tags="UX,Service Design">
+                <a href="projects/mybubble.html">
+                   <div class="p-2 pb-5" id="dp-MyBubble">
+                     <div class="card margin-bottom pointer" > 
+                       <img src="images/mybubble/Mybubble1.jpg"  class="card-img-top" alt="MyBubble-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Service Design</p>
+                         <h5 class="card-title">My Bubble: UX of a bank mobile app.</h5>
+                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
+               <!--Movo-->
+              <div class="project-card" data-tags="AI">
+                <a href="projects/movo.html">
+                   <div class="p-2 pb-5" id="dp-Movo">
+                     <div class="card margin-bottom pointer" > 
+                       <img src="images/movo/Movo1.jpg"  class="card-img-top" alt="Movo-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Artificial Intelligence</p>
+                         <h5 class="card-title">Movo: innovative time management.</h5>
+                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
+               <!--EggUp-->
+               <div class="project-card" data-tags="UX,Physical Prototype">
+                 <a href="projects/eggup.html">
+                    <div class="p-2 pb-5" id="dp-EggUp">
+                      <div class="card margin-bottom pointer" > 
+                        <img src="images/eggup/Eggup1.jpg"  class="card-img-top" alt="EggUp-Cover">
+                        <div class="card-body">
+                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Physical Prototype</p>
+                          <h5 class="card-title">EGGup: AR app and IoT device.</h5>
+                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!--360Learn-->
+                <div class="project-card" data-tags="UX,Front End">
+                 <a href="projects/360learn.html">
+                    <div class="p-2 pb-5" id="dp-360Learn">
+                      <div class="card margin-bottom pointer" > 
+                        <img src="images/360learn/Learn1.jpg"  class="card-img-top" alt="360Learn-Cover">
+                        <div class="card-body">
+                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Front End</p>
+                          <h5 class="card-title">360Learn: interactive 360videos platform.</h5>
+                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+               <!--Trenord-->
+               <div class="project-card" data-tags="UX,Service Design">
+                <a href="projects/trenord.html">
+                   <div class="p-2 pb-5" id="dp-Trenord">
+                     <div class="card margin-bottom pointer" > 
+                       <img src="images/trenord/Trenord1.jpg"  class="card-img-top" alt="Trenord-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Service Design</p>
+                         <h5 class="card-title">Trenord website redesign.</h5>
+                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
+               <!--Anagrafe-->
+              <div class="project-card" data-tags="AI">
+                <a href="projects/anagrafe.html">
+                   <div class="p-2 pb-5" id="dp-Anagrafe">
+                     <div class="card margin-bottom pointer" > 
+                       <img src="images/anagrafe/Anagrafe1.jpg"  class="card-img-top" alt="Anagrafe-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Artificial Intelligence</p>
+                         <h5 class="card-title">Registry office website redesign.</h5>
+                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
+               <!--Lotte-->
+               <div class="project-card" data-tags="UX,Front End">
+                 <a href="projects/lotte.html">
+                    <div class="p-2 pb-5" id="dp-Lotte">
+                      <div class="card margin-bottom pointer" > 
+                        <img src="images/lotte/Lotte1.jpg"  class="card-img-top" alt="Lotte-Cover">
+                        <div class="card-body">
+                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">UX, Front End</p>
+                          <h5 class="card-title">Discover Lotte: immersive exhibition.</h5>
+                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+                <!--Buckets-->
+                <div class="project-card" data-tags="UX,Front End">
+                 <a href="projects/buckets.html">
+                    <div class="p-2 pb-5" id="dp-Buckets">
+                      <div class="card margin-bottom pointer" > 
+                        <img src="images/buckets/Bucket1.jpg"  class="card-img-top" alt="Buckets-Cover">
+                        <div class="card-body">
+                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Front End</p>
+                          <h5 class="card-title">Smart Buckets: enabling interfaces.</h5>
+                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+            </div>
+          </div>
+        
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <div class="container-fluid">
+  <div class="container">
+    <div class="pt-5 mt-5 row px-2 align-items-end">
+      <div class="col-12 col-lg-6">
+        <div class="d-flex align-items-center">
+          <span class=" "> My Design vision</span>
+        </div>
+        <h2 class="  py-3">Merging Technical Expertise with Creative Problem-Solving</h2>
+        <a href="about.html" role="button" class="btn btn-dark px-4 rounded">About me and my skills</a>
+      </div>
+      <div class="col-12 col-lg-6">
+        <hr class="border-3 w-25 ml-0 d-none d-lg-block border-dark">
+        <hr class="border-3 w-50 ml-0 d-lg-none border-dark">
+       <p class=" ">My approach to design is deeply rooted in a strong technical background and a commitment to creating solutions that are not only innovative but also truly feasible. 
+        With experience spanning engineering principles, production processes, and hands-on prototyping, I bring a unique perspective that bridges creativity with practicality. 
+        I believe that great design emerges from understanding real user needs and translating them into products and services that are both impactful and achievable. 
+        By leveraging my technical skills and a user-centered mindset, I strive to push the boundaries of innovation while ensuring that every idea can be brought to life efficiently and effectively.
+        </p>
+      </div>
+    </div>
+    </div>
+  </div>
+
+  <div class="container-fluid px-md-5 px-sm-3 pt-5 px-2"><hr class="m-0 border-dark"></div>
+
+  <div class="container-fluid" id="design-highlights">
+    <div class="container py-5 my-5 px-2">
+    <h2>Design Highlights</h2>
+    <div class="row">
+    <div class="col-12 col-lg-6">
+     <p class=" ">This section provides a glimpse into my versatile design journey, 
+      showcasing key themes and technologies that define my work. 
+      Each word represents a unique project, blending innovation and feasibility. 
+      </p>
+    </div>
+    <div class="col-12 col-lg-6">
+     <p class=" ">
+      Click on any to explore the story behind it and understand how I turn concepts into impactful solutions.
+    </p>
+    </div>
+  </div>
+    <div class="highlight-grid">
+      <a href="/projects/eggup.html" class="highlight-word" data-project="ar">AR</a>
+      <a href="/projects/myni.html" class="highlight-word" data-project="3d-printing">3D PRINTING</a>
+      <a href="/projects/ml4designers.html" class="highlight-word" data-project="ai-toolkit">AI TOOLKIT</a>
+      <a href="/projects/buckets.html" class="highlight-word" data-project="multisensorial-room">MULTISENSORIAL ROOM</a>
+      <a href="/projects/kidult.html" class="highlight-word" data-project="multitouchpoint-system">MULTITOUCHPOINT SYSTEM</a>
+      <a href="/projects/kidult.html" class="highlight-word" data-project="ai-jewelry-configurator">AI JEWELRY CONFIGURATOR</a>
+      <a href="/projects/whynow.html" class="highlight-word" data-project="problem-solving">PROBLEM SOLVING</a>
+      <a href="/projects/tenutatrepalme.html" class="highlight-word" data-project="coding">CODING</a>
+    </div>
+  </div>
+  </div>
+
 
       </div>
 
+
+
       <!-- Cookie -->
-      <div class="modal fade " id="Cookie" tabindex="-1" role="dialog" aria-labelledby="ModalCookie" aria-hidden="true">
+     <!-- <div class="modal fade " id="Cookie" tabindex="-1" role="dialog" aria-labelledby="ModalCookie" aria-hidden="true">
         <div class="modal-dialog " role="document">
           <div class="modal-content">
             <div class="navbar-custom"> <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a> <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50"></a> <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a> </div>
             <div class="modal-body">
-              <div class="container-fluid padding-container-modal animation-title" >
+              <div class="container-fluid padding-container-modal  " >
                 <p class="modal-title text-center">Cookie consent</p>
                 <div style="color:black;text-align: left;">
                 <script id="CookieDeclaration" src="https://consent.cookiebot.com/73ca461a-5bff-4ddf-956f-34ce05da2d8c/cd.js" type="text/javascript" async></script>
@@ -745,9 +332,14 @@
             <div class="modal-footer"> </div>
           </div>
         </div>
-      </div>
-  </footer>
-</div>
+      </div> -->
+
+
+<!-- Script for including my js file -->
+<script src="js/file.js"></script> 
+
+<!-- Script to filter projects -->
+<script src="js/filters.js"></script> 
 
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
 <script src="js/jquery-3.4.1.min.js"></script> 
@@ -755,19 +347,22 @@
 <!-- Include all compiled plugins (below), or include individual files as needed --> 
 <script src="js/popper.min.js"></script> 
 <script src="js/bootstrap-4.4.1.js"></script> 
-<script>
-    	$(document).ready(function() {
-		  $('[data-toggle=offcanvas]').click(function() {
-		    $('.sidebar-offcanvas').toggleClass('active', 1000);
-		  });
-		});
 
-	$( '.sidebar-offcanvas div' ).on("click", function(){
-  $('.sidebar-offcanvas').removeClass('active', 1000);
-});
-	
-	
-	
-	</script>
+<!-- Script to print common header and footer -->
+<script>
+  fetch('/common/header.html')
+  .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+      initializeLottie(); // Chiamata dopo il caricamento dell'header
+    });
+
+  fetch('/common/footer.html')
+    .then(response => response.text())
+    .then(data => document.body.insertAdjacentHTML('beforeend', data));
+</script>
+
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
 </body>
 </html>

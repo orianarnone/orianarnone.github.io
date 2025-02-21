@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Contact Oriana Arnone - UX/UI Designer</title>
+
+<meta name="description" content="Contact Oriana Arnone, UX/UI Designer, to collaborate on interactive and user-centered design projects.">
+
+<!-- CSS -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<!-- scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div> 
+
+  
+  <!-- Content -->
+
+  <div class="container-fluid py-5">
+    <div class="position-fixed d-none d-md-block background-text title">Get in touch</div>
+    
+      <div class="container py-5 my-5">
+        <div class=" row align-items-end">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex align-items-center">
+              <dotlottie-player class="element-light" src="/files/envelope-light.json" background="transparent" speed="0.5" style="width: 50%; height: 50%" direction="1" playMode="normal" loop autoplay>
+              </dotlottie-player>
+              <dotlottie-player class="element-dark" src="/files/envelope-dark.json" background="transparent" speed="0.5" style="width: 50%; height: 50%" direction="1" playMode="normal" loop autoplay>
+              </dotlottie-player>
+            </div> 
+            <h2 class="animation-title py-3">Let’s create something amazing together!</h2>
+            <button class="btn btn-dark rounded px-4" href="mailto:oriana.arnone@gmail.com" class="social-contact">Send me an email
+            </button> 
+            
+          </div>
+          <div class="col-12 col-lg-6" id="contacts-paragraph">
+            <hr class="border-3 border-dark w-25 ml-0 d-none d-lg-block">
+            <hr class="border-3 border-dark w-50 ml-0 d-lg-none">
+            <p>I’m a passionate designer eager to create innovative and <strong>user-centered digital experiences</strong>. 
+              My portfolio showcases a blend of creativity, technical skills, and problem-solving capabilities honed through years of professional experience and academic projects.<br><br>
+               <strong>If you’re looking for someone who can bring fresh ideas and thoughtful design solutions to your team, I’d love to connect! </strong><br><br>
+               Feel free to explore my portfolio and reach out to discuss how I can contribute to your company’s success. 
+            </p>
+            <p> 
+              <a class="d-inline-flex align-items-start" href="mailto:oriana.arnone@gmail.com" style="text-decoration:underline"> 
+                <img class="element-light mr-2" src="/images/Icon-arrow-left-lm.svg">
+                <img class="element-dark mr-2" src="/images/Icon-arrow-left-dm.svg">
+                <strong>oriana.arnone@gmail.com</strong>
+              </a> 
+            <br>
+             <a class="d-inline-flex align-items-start" href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" style="text-decoration:underline">
+                <img class="element-light mr-2 mb-0" src="/images/Icon-arrow-left-lm.svg">
+                <img class="element-dark mr-2 mb-0" src="/images/Icon-arrow-left-dm.svg">
+              <strong>my linkedin profile</strong>
+            </a>
+            </p>
+          </div>
+        </div>
+        </div>
+      
+
+    <!--<div class="container py-5 my-5">
+      <div class="row">
+        <div class="col-12 col-lg-6 align-items-end">
+          <h2 class="animation-title py-3">Let’s create something amazing together!</h2>
+        </div>
+          <div class="col-12 col-md-6">
+            <form action="https://formspree.io/f/mannardr" method="POST" class="p-4 border shadow">
+              <h3>Contact Me</h3>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="_replyto" class="form-control" placeholder="Your email" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Your message" required></textarea>
+              </div>
+              <button type="submit" class="btn btn-dark rounded px-4">Send</button>
+            </form>
+          </div>
+      </div>
+    </div>-->
+
+  </div>
+</div>
+
+<!-- Script for including my js file -->
+<script src="js/file.js"></script> 
+
+<!-- Script to filter projects -->
+<script src="js/filters.js"></script> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+
+<!-- Script to print common header and footer -->
+<script>
+  fetch('/common/header.html')
+  .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+      initializeLottie();
+    });
+
+  fetch('/common/footer.html')
+    .then(response => response.text())
+    .then(data => document.body.insertAdjacentHTML('beforeend', data));
+</script>
+
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<<html lang="en" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>About me</title>
+
+<meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
+<meta name="description" content="About me description">
+
+<!-- CSS -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<!-- scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+<div> 
+
+  
+  <!-- Content -->
+
+    <div class="container-fluid" id="content">
+      <div class="container pt-5 mt-5">
+        <div class="py-5 my-5 row align-items-end">
+          <div class="col-12 col-lg-6">
+            <div class="d-flex align-items-center">
+              <span class="animation-title"> About me</span>
+            </div>
+            <h2 class="animation-title py-3">My Education & Background</h2>
+            <button class="btn btn-dark px-4 rounded" onclick="window.open('/files/Oriana-Arnone_CV2021.pdf')">Resume (pdf)</button>
+          </div>
+          <div class="col-12 col-lg-6">
+            <hr class="animation-title w-25 ml-0 d-none d-lg-block" style="border-top:3px solid black;">
+            <hr class="animation-title w-50 ml-0 d-lg-none" style="border-top:3px solid black;">
+           <p class="animation-title">I studied Digital and Interaction Design at Politecnico di Milano. <br>
+            I did my master's thesis about developing tools to enable <strong>User Experience</strong> Designer to work on projects based on Artificial Intelligence and <strong>Machine Learning</strong> technologies.<br>
+            <br>
+            I worked in Intesa San Paolo as a Digital Analyst on two project. The first one was an international project where I had the opportunity to improve my <strong>problem solving</strong> skills and practice english. The latter was the supervision of the testing phase of Inbiz mobile application. <br>
+            <br>
+            I also worked in Gruppo Mediaset as <strong>UCD Researcher and UX Designer</strong>. I collaborated with different figures about innovative solutions that imply Guppo Mediaset's Hyper360 technology. 
+            </p>
+          </div>
+        </div>
+        </div>
+      </div>
+
+      <!--<div class="container-fluid" id="content">
+        <div class="container pb-5 mb-5">
+          <div class="pt-5 mt-5 row align-items-end">
+            <div class="col-12 col-lg-6">
+              <div class="d-flex align-items-center">
+                <span class="animation-title"> My Design vision</span>
+              </div>
+              <h2 class="animation-title py-3">Merging Technical Expertise with Creative Problem-Solving</h2>
+              <button class="btn btn-dark px-4 rounded">About me and my skills</button>
+            </div>
+            <div class="col-12 col-lg-6">
+              <hr class="animation-title w-25 ml-0 d-none d-lg-block" style="border-top:3px solid black;">
+              <hr class="animation-title w-50 ml-0 d-lg-none" style="border-top:3px solid black;">
+             <p class="animation-title">My approach to design is deeply rooted in a strong technical background and a commitment to creating solutions that are not only innovative but also truly feasible. 
+              With experience spanning engineering principles, production processes, and hands-on prototyping, I bring a unique perspective that bridges creativity with practicality. 
+              I believe that great design emerges from understanding real user needs and translating them into products and services that are both impactful and achievable. 
+              By leveraging my technical skills and a user-centered mindset, I strive to push the boundaries of innovation while ensuring that every idea can be brought to life efficiently and effectively.
+              </p>
+            </div>
+          </div>
+          </div>
+        </div>-->
+
+</div>
+
+<!-- Script for including my js file -->
+<script src="js/file.js"></script> 
+
+<!-- Script to filter projects -->
+<script src="js/filters.js"></script> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+
+<!-- Script to print common header and footer -->
+<script>
+  fetch('/common/header.html')
+  .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+      initializeLottie();
+    });
+
+  fetch('/common/footer.html')
+    .then(response => response.text())
+    .then(data => document.body.insertAdjacentHTML('beforeend', data));
+</script>
+
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+</body>
+</html>
