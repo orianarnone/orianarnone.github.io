@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Cookie Management</title>
+
+<meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
+<meta name="description" content="Cookie Management">
+
+<!-- CSS -->
+<link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+<!-- scripts -->
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+      <div class="container-fluid" id="Cookie">
+        <div class="container" role="document">
+          <div class="py-5">
+            <div class="navbar-custom">
+              <a  class="custom-close border-0" data-dismiss="modal"> &lt; </a>
+              <a href="https://www.linkedin.com/in/oriana-arnone-b3a5a519b/" target="_blank" class="fa fa-linkedin icon-top-bar icon-margin-50">
+              </a>
+              <a href="mailto:oriana.arnone@gmail.com" class="fa fa-envelope icon-top-bar"></a>
+            </div>
+            <div>
+              <div class="container-fluid animation-title" >
+                <p class="modal-title text-center">Cookie consent</p>
+                <div style="color:black;text-align: left;">
+                <script id="CookieDeclaration" src="https://consent.cookiebot.com/73ca461a-5bff-4ddf-956f-34ce05da2d8c/cd.js" type="text/javascript" async></script>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> 
+
+<!-- Script for including my js file -->
+<script src="js/file.js"></script> 
+
+<!-- Script to filter projects -->
+<script src="js/filters.js"></script> 
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+<script src="js/jquery-3.4.1.min.js"></script> 
+
+<!-- Include all compiled plugins (below), or include individual files as needed --> 
+<script src="js/popper.min.js"></script> 
+<script src="js/bootstrap-4.4.1.js"></script> 
+
+<!-- Script to print common header and footer -->
+<script>
+  fetch('/common/header.html')
+  .then(response => response.text())
+    .then(data => {
+      document.body.insertAdjacentHTML('afterbegin', data);
+      initializeLottie();
+    });
+
+  fetch('/common/footer.html')
+    .then(response => response.text())
+    .then(data => document.body.insertAdjacentHTML('beforeend', data));
+</script>
+
+<script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+</body>
+</html>

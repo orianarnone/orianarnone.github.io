@@ -1,0 +1,41 @@
+<!-- 
+GitHub Pages utilizza una configurazione di base in cui il root del sito è la directory principale del repository. 
+Se il tuo sito è ospitato su un custom domain (ad esempio, www.orianaarnone.com), /images/logo-ori.png funzionerà perfettamente.
+Se invece il tuo sito è ospitato su una sottodirectory di GitHub Pages (esempio: https://username.github.io/repository-name), 
+dovrai aggiungere il nome del repository come prefisso a tutti i percorsi assoluti.
+-->
+
+<div class="fixed-top px-md-5 px-sm-3 px-2 bg-page">
+  <nav class="navbar navbar-expand-lg bg-transparent border-bottom border-dark px-md-5 px-sm-3 px-1">
+    <button class="btn p-0" onclick="changeTheme()">
+      <dotlottie-player id="theme-toggle" src="/files/logo-to-dark.json" background="transparent" speed="1.5" style="width: 60px; height: 40px" direction="1" playMode="normal">
+      </dotlottie-player>
+     <!-- <dotlottie-player id="light-logo" src="/files/logo-to-dark.json" background="transparent" speed="1.5" style="width: 60px; height: 40px" direction="1" playMode="normal">
+      </dotlottie-player>
+      <dotlottie-player id="dark-logo" src="/files/logo-to-light.json" background="transparent" speed="1.5" style="width: 60px; height: 40px" direction="1" playMode="normal">
+      </dotlottie-player>-->
+    </button>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse text-center py-5 py-lg-0" id="navbarTogglerDemo02">
+      <a class="mx-3 navbar-brand text-uppercase" href="/index.html">Oriana Arnone</a>
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item py-2 py-lg-0 mx-1">
+          <a class="nav-link px-3 " href="/about.html">About</a>
+        </li>
+        <li class="nav-item py-2 py-lg-0 mx-1">
+          <a class="nav-link px-4" href="/contacts.html">Contacts</a>
+        </li>
+        <li class="nav-item py-2 py-lg-0 mx-3">
+          <button data-toggle="list" onclick="window.open('/files/resume-oriana-arnone.pdf')" class="d-lg-block d-none btn btn-dark rounded px-4">Resume</button>
+          <a onclick="window.open('/files/resume-oriana-arnone.pdf')"class="nav-link px-4 d-lg-none">Resume</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+
+
