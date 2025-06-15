@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" class="no-transition">
 
 <head>
 
@@ -7,10 +7,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Firt Project</title>
+<title>Machine Learning for Designers</title>
 
 <meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
-<meta name="description" content="First project description">
+<meta name="description" content="Oriana Arnone's Portfolio: Machine Learning for designers project">
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
 
 <!-- CSS -->
 <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -20,13 +27,6 @@
 
 <!-- scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
-
-<script>
-  (function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  })();
-</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,32 +45,41 @@
       </div>
       
     <!-- ML4Designers -->
-      <div class="mt-5 container-fluid p-0">
-
-        <div class="pt-5 container-lg">
-          <div class="row py-5">
-            <div class="col-12 col-lg-6 pr-lg-5">
-              <p class=" ">ML, RESEARCH, METHODOLOGY, UX</p><h1>Machine Learning for Designers</h1>
-              <p>Design of a methodology and tools to enable designers to include AI in their projects.</p>
-            </div>
-            <div class="col-12 col-lg-3 pt-5">
-              <h3 class="">Keywords</h3>
-              <div class="">
-                <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                <p class="py-2 m-0">Design thinking, methodology, machine learning, tests and workshops, tools for designers</p>
+      <div class="container-fluid p-0">
+        
+        <div class="pt-5 sumup data-trigger">
+          <div class="pt-5 container-lg">
+            <div class="row py-5">
+              <div class="col-12 col-lg-6 pr-lg-5">
+                <p class=" ">ML, RESEARCH, METHODOLOGY, UX</p><h1>Machine Learning for Designers</h1>
+                <p>Design of a methodology and tools to enable designers to include AI in their projects.</p>
               </div>
-            </div>
-            <div class="col-12 col-lg-3 pt-5">
-              <h3 class="">My Role</h3>
-              <div class="">
-                <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                <p class="py-2 m-0">Researcher,<br> tools/kit designer</p>
+              <div class="col-12 col-lg-3 pt-5">
+                <h3 class="">Keywords</h3>
+                <div class="">
+                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
+                  <p class="py-2 m-0">Design thinking, methodology, machine learning, tests and workshops, tools for designers</p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3 pt-5">
+                <h3 class="">My Role</h3>
+                <div class="">
+                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
+                  <p class="py-2 m-0">Researcher,<br> tools/kit designer</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <img src="../images/phyleas/Phyleas1.jpg" class="w-100" alt="Phyleas1">
+        
+        <div class="position-relative">
+          <div class="sumup-background dark-trigger">
+          </div>
+          <div class="container-lg sumup-img">
+            <img src="../images/ml4designers/ml4d_03.jpg" class="w-100" alt="ML4Designers">
+          </div>
+        </div>
 
         <div class="pt-5 container-lg">
           <!--a  class="btn-dark rounded px-4 py-2" href="/index.html"> &lt; Back</a-->
@@ -79,64 +88,116 @@
             <div id="project-index" class="d-none d-md-block col-md-3 col-lg-2 py-5 mt-5 p-0">
               <div class="position-sticky d-flex flex-column" style="top:200px;">
                 <a href="#intro" class="active m-1 btn btn-sm btn-outline-dark rounded px-3">Overview</a>
-                <a href="#informationflow" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Information Flow</a>
-                <a href="#systemmap" class="m-1 btn btn-sm btn-outline-dark rounded px-3">System Map</a>
-                <a href="#improvements" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Improvements</a>
-                <a href="#wireframes" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Wireframes</a>
-                <a href="#userinterface" class="m-1 btn btn-sm btn-outline-dark rounded px-3">User Interface</a>
+                <a href="#goals" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Project Goal</a>
+                <a href="#what" class="m-1 btn btn-sm btn-outline-dark rounded px-3">What is ML</a>
+                <a href="#process" class="m-1 btn btn-sm btn-outline-dark rounded px-3">New Design Process</a>
+                <a href="#materials" class="m-1 btn btn-sm btn-outline-dark rounded px-3">ML for designers: cards and poster</a>
+                <a href="#test" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Test with users in a workshop</a>
+                <a href="#iteration" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Material iteration</a>
+                <a href="#application" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Real application in companies</a>
               </div>
             </div>
 
             <div data-bs-spy="scroll" data-bs-target="#project-index" data-bs-offset="0" tabindex="0" class="p-0 col-12 col-md-8 col-lg-9 mx-auto">
               
               <section class="pt-5 pb-0" id="intro">
-                <h1 class="pt-5">Phyleas</h1>
+                <h1 class="pt-5">Overview</h1>
                 <div>
-                  <p class="pb-3"> We had to ideate an innovative service to <strong>give more meaning to the transportation experience</strong> in public transports. After research and analysis on commuters, we thought about a mobile application that has the role of a <strong>companion</strong> and gives instructions to commuters through earphones. <br>
-                  <br>
-                  The application provides the right information at the right moment by telling the user about delays, cancellations, and walking time. During the time the user spends on public transportation, it will also suggest and play for him some audiobooks or music for the estimated while.<br>
-                  <br>
-                  The <strong>application will self learn the user’s habits</strong> having access to his GPS location, calendar, transportation timetables, and personal taste of music and audiobook in order to suggest to the user when he should leave home and how he can <strong>productively spend time on the public transportation.</strong> We created a storyboard, an action diagram, a system map, and a business model canvas to describe the service.<br>
-                  <br>
-                  After the course, I decided to continue the project. <strong>I designed my vision of the mobile application</strong> through maps, interaction study, wireframes, style, UX, and UI.</p>
+                  <p class="pb-3">  
+                    <strong>I tackled a growing challenge in the design world:</strong> how can designers effectively create products, services, and experiences that integrate machine learning (ML) while keeping users at the center?<br><br>
+                  
+                    The project began with <strong>in-depth research into artificial intelligence</strong>, including a thorough analysis of academic literature and the completion of two foundational courses from the University of Helsinki.<br>
+                    To gain a deeper technical understanding, I also completed <strong>Stanford University's "Machine Learning" course</strong> and I earned the certification.<br><br>
+                  
+                    With this solid foundation, I investigated the <strong>main barriers designers face in AI projects</strong>—especially during the early, strategic phases of idea generation and problem framing.<br>
+                    In response, I <strong>enriched the traditional user-centered design process</strong> by integrating ML knowledge and tools specifically shaped for designers.<br><br>
+                  
+                    <strong>The outcome was a set of design materials, in the form of cards, that support innovation by helping designers:</strong>
+                    <ul>
+                      <li><strong>Understand ML capabilities</strong> in a concrete and design-relevant way</li>
+                      <li><strong>Choose the most suitable ML tasks</strong> to address specific user needs</li>
+                      <li><strong>Improve collaboration and communication</strong> with ML experts</li>
+                    </ul>
+                  
+                    These tools were <strong>tested in a hands-on workshop</strong> with master’s students in Digital and Interaction Design.<br>
+                    Feedback was collected, analyzed, and used to further refine the tools and the process.<br><br>
+                  
+                    To ensure long-term impact, I also <strong>designed a dedicated website</strong> that consolidates the methodology, tools, and resources, making them available to the broader design community.<br><br>
+                  
+                    <strong>This project reflects my strong interest in innovation, my ability to translate complex technologies into actionable tools, and my commitment to human-centered design</strong> even in emerging fields like artificial intelligence.<br>
+                    Today, I’m proud that <strong>companies have started recognizing its value</strong>: a design team has already invited me to lead training sessions based on this work.
+                  </p>
+                                
                 </div>
-                <img src="../images/phyleas/Phyleas1.jpg" class="w-100" alt="Phyleas1">
+                <img src="../images/ml4designers/ml4d_01.png" class="w-100" alt="ml4d_01">
               </section>
               
-              <section class="pt-5 pb-0" id="informationflow">
+              <section class="pt-5 pb-0" id="goals">
                 <div>
-                  <h2 class="pt-5"> User Information Flow </h2>
-                  <p class="pb-3"> Me and my teamates analyzed different type of user informations. In the schema below, we were able to translate user sources into different design opportunities. In this way we could continue in the framing of the service through maps, for example the system map, very userful to understand information, material and financial flow. </p>
+                  <h2 class="pt-5"> Project Goal </h2>
+                  <p class="pb-3"> 
+                    This project aimed to bridge that gap by equipping designers with tools and methods that make ML both accessible and actionable—without requiring deep technical expertise. The ultimate goal was to empower designers to stay user-centered while working with machine learning technologies.  
+                  </p>
                 </div>
-                <img src="../images/phyleas/Phyleas3.jpg"  class="w-100" alt="Phyleas3">
+                <img src="../images/ml4designers/ml4d_02.png"  class="w-100" alt="ml4d_02">
               </section>
 
-              <section class="pt-5 pb-0" id="systemmap">
+              <section class="pt-5 pb-0" id="what">
                 <div>
-                <h2 class="pt-5"> System map </h2>
+                <h2 class="pt-5"> What is ML </h2>
+                <p class="pb-3"> 
+                  Machine Learning is a branch of artificial intelligence that enables systems to learn from data and make predictions or decisions without being explicitly programmed. While its potential is vast, it can feel abstract or intimidating for non-technical professionals. This section breaks down ML concepts in a clear, design-relevant way, focusing on tasks (like classification or clustering) that can inspire creative, user-centered applications.
+                </p>
                 </div>
-                  <img src="../images/phyleas/Phyleas4.jpg"  class="w-100" alt="Phyleas4"> 
+                  <img src="../images/ml4designers/ml4d_05.png"  class="w-100" alt="ml4d_03"> 
               </section>
               
-              <section class="pt-5 pb-0" id="improvements">
+              <section class="pt-5 pb-0" id="process">
                 <div>
-                  <h2 class="pt-5"> Consequences and possible improvements </h2>
-                  <p class="pb-3"> In this part of the project we tought about the consequences of our service in terms of Self-perception, Actions and interpersonal relationship.Our critical theme was the automation of actions and services through the use of data. <br>
-                  After the exploration of the consequences we though about possible improvements. </p>
+                  <h2 class="pt-5"> New Design Process </h2>
+                  <p class="pb-3"> 
+                    To support designers in working with ML, I proposed an enriched design process that builds on traditional user-centered methodologies. This revised approach integrates ML considerations from the earliest stages, helping designers frame problems differently, explore data-informed opportunities, and co-create more effectively with developers and data scientists. It’s a process shaped by designers, for designers—with real-world constraints and creativity in mind. 
+                  </p>
                 </div>
-                <img src="../images/phyleas/Phyleas6.jpg"  class="w-100" alt="Phyleas6"> <img src="../images/phyleas/Phyleas5.jpg"  class="w-100" alt="Phyleas5">
+                <img src="../images/ml4designers/ml4d_08.png"  class="w-100" alt="ml4d_04">
               </section>
               
-              <section class="pt-5 pb-0" id="wireframes">
+              <section class="pt-5 pb-0" id="materials">
                 <div>
-                <h2 class="pt-5 pb-0"> Wireframes </h2>
+                <h2 class="pt-5 pb-0"> ML for designers: cards and poster </h2>
+                <p class="pb-3"> 
+                  To make ML tangible for design teams, I developed a set of cards and a poster that translate technical concepts into design opportunities. Each card focuses on a specific ML task, offering concrete examples, design prompts, and user-centered applications. The poster serves as a visual map of the design process, enriched with ML checkpoints. These materials aim to spark discussion, guide ideation, and strengthen interdisciplinary collaboration. 
+                </p>
                 </div>
-                <img src="../images/phyleas/Phyleas7.jpg"  class="w-100" alt="Phyleas7">
+                <img src="../images/ml4designers/ml4d_013.jpg"  class="w-100" alt="ml4d_05">
+                <img src="../images/ml4designers/ml4d_11.jpg"  class="w-100" alt="ml4d_05">
+                <img src="../images/ml4designers/ml4d_14.jpg"  class="w-100" alt="ml4d_05">
               </section>
               
-              <section class="pt-5 pb-0" id="userinterface">
-                <h2 class="pt-5"> Final User Interface </h2>
-                <img src="../images/phyleas/Phyleas9.jpg"  class="w-100" alt="Phyleas9">
+              <section class="pt-5 pb-0" id="test">
+                <h2 class="pt-5"> Test with users in a workshop </h2>
+                <p class="pb-3"> 
+                  The tools were tested in a workshop with master’s students in Digital and Interaction Design. Through group activities and guided exercises, participants applied the cards to real design challenges. Their feedback revealed how the materials helped them better understand ML possibilities and inspired more informed, creative concepts. The session also highlighted areas for improvement and potential expansion of the toolkit. 
+                </p>
+                <img src="../images/ml4designers/ml4d_07.png"  class="w-100" alt="ml4d_06">
+              </section> 
+
+              <section class="pt-5 pb-0" id="iteration">
+                <div>
+                <h2 class="pt-5 pb-0"> Material Iteration </h2>
+                <p class="pb-3"> 
+                  Based on workshop insights, I refined both the content and format of the cards and poster. I clarified terminology, added more relatable examples, and introduced new prompts to encourage critical thinking. This iterative process ensured the materials stayed grounded in real design practice, addressing actual challenges faced by designers entering ML projects for the first time.
+                </p>
+                </div>
+                <img src="../images/ml4designers/ml4d_04.png"  class="w-100" alt="ml4d_07">
+              </section>
+              
+              <section class="pt-5 pb-0" id="application">
+                <h2 class="pt-5"> Real application in companies </h2>
+                <p class="pb-3"> 
+                  After the academic testing phase, the toolkit attracted interest from professionals. I was invited to hold training sessions for a design team in a company exploring ML-driven services. Seeing the tools used in a real organizational setting confirmed their value and relevance. This experience also offered new perspectives, helping me consider how the materials can evolve for broader adoption in industry.
+                </p>
+                <img src="../images/ml4designers/timing.png"  class="w-100" alt="ml4d_08">
               </section> 
 
               
@@ -156,12 +217,10 @@
                 <hr class="border-3 w-25 ml-0 d-none d-lg-block border-dark">
                 <hr class="border-3 w-50 ml-0 d-lg-none border-dark">
                <p class="p-0 m-0">
-                Politecnico di Milano - Course of User Experience Design<br><br>
-                November/December 2018<br>
-                Concept was ideated in collaboration with Azzolin, Hoogen, Shahriari, Xu, Zheng.<br><br>
-                June 2020<br>
-                I decided to work on the concept designing the app ux, ui, wireframes and graphics.<br> 
-                I also designed the interactive prototype of the mobile app. </p>
+                Politecnico di Milano - Master thesis in Digital and interaction design<br><br>
+                May 2020 / April 2021<br>
+                Supervisor: Davide Spallazzo<br> 
+                Workshop assistant: Martina Scianname</p>
               </div>
             </div>
             </div>
@@ -190,7 +249,7 @@
 
 <!-- Script to print common header and footer -->
 <script>
-  fetch('/common/header.html')
+  fetch('/common/header-dark.html')
   .then(response => response.text())
     .then(data => {
       document.body.insertAdjacentHTML('afterbegin', data);

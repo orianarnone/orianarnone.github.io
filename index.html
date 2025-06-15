@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="light" class="no-transition">
 
 <head>
 
@@ -10,7 +10,14 @@
 <title>Oriana Arnone - UX, UI Designer</title>
 
 <meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
-<meta name="description" content="Personal website of Oriana Arnone, UX/UI, Digital and Interaction Designer. Here you can find my resume and my portfolio with a selection of projects.">
+<meta name="description" content="Personal website of Oriana Arnone, UX/UI, Digital and Interaction Designer. This is a digital portfolio with a selection of projects.">
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
 
 <!-- CSS -->
 <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -25,13 +32,6 @@
 
 <!-- scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
-
-<script>
-  (function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  })();
-</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -59,7 +59,7 @@
       <div class="col-12 col-lg-6">
         <hr class="border-3 w-25 ml-0 d-none d-lg-block border-top border-dark">
         <hr class="border-3 w-50 ml-0 d-lg-none border-top border-dark">
-       <p class=" ">I’m a versatile designer with strong problem solving skills. I care about the details and I aim to creat effective, intuitive and easy to use interfaces. I like  prototyping - it helps me think throung interaction and new possibilities.<br> 
+       <p class=" ">I’m a versatile designer with strong problem solving skills. I care about the details and I aim to creat effective, intuitive and easy to use interfaces.<br> 
           I’m an empathetic person with a technical and  logical mindset. I like to work with ML, AI, HTML, CSS and JS.
         </p>
       </div>
@@ -83,9 +83,8 @@
           <span class="pr-3  "> Filter by: </span>
           <div id="filter-buttons">
             <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="UX">UX</button>
-            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="UI">UI</button>
-            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Front End">Front End</button>
             <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="AI">AI</button>
+            <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Front End">Front End</button>
             <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Interaction Design">Interaction Design</button>
             <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Service Design">Service Design</button>
             <button class="m-1 btn btn-sm btn-outline-dark rounded px-3" data-filter="Physical Prototype">Physical Prototype</button>
@@ -101,11 +100,11 @@
           <div>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3">
               <!--ML4Designers-->
-              <!--<div class="project-card" data-tags="AI,Service Design">
+              <div class="project-card" data-tags="AI,Service Design">
                 <a href="projects/ml4designers.html">
-                   <div class="p-2 pb-5" id="dp-ml4designers">
-                     <div class="card margin-bottom pointer" > 
-                       <img src="images/phyleas/Phyleas.png"  class="card-img-top" alt="ML4Designers-Cover">
+                   <div class="p-2 pb-5 h-100" id="dp-ml4designers">
+                     <div class="card margin-bottom h-100 pointer" > 
+                       <img src="images/hp_covers/ml4d2.jpg"  class="card-img-top" alt="ML4Designers-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">AI, Service Design</p>
                          <h5 class="card-title">Machine Learning for Designers.</h5>
@@ -114,12 +113,12 @@
                      </div>
                    </div>
                  </a>
-               </div>-->
+                </div>
                <!--Kidult-->
               <!--<div class="project-card" data-tags="AI,Service Design">
                 <a href="projects/kidult.html">
-                   <div class="p-2 pb-5" id="dp-kidult">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-kidult">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/phyleas/Phyleas.png"  class="card-img-top" alt="Kidult-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">UX, AI, Service Design</p>
@@ -133,8 +132,8 @@
                <!--Whynow-->
               <!--<div class="project-card" data-tags="UX, Interaction Design">
                 <a href="projects/whynow.html">
-                   <div class="p-2 pb-5" id="dp-whynow">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-whynow">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/phyleas/Phyleas.png"  class="card-img-top" alt="Whynow-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">UX, Interaction Design</p>
@@ -146,13 +145,13 @@
                  </a>
                </div>-->
                <!--Buckets-->
-               <div class="project-card" data-tags="UX, Interactive Design, Front End">
+               <div class="project-card" data-tags="UX,Physical Prototype,Front End">
                 <a href="projects/buckets.html">
-                   <div class="p-2 pb-5" id="dp-Buckets">
-                     <div class="card margin-bottom pointer" > 
-                       <img src="images/buckets/Bucket1.jpg"  class="card-img-top" alt="Buckets-Cover">
+                   <div class="p-2 pb-5 h-100" id="dp-Buckets">
+                     <div class="card margin-bottom h-100 pointer" > 
+                       <img src="images/hp_covers/buckets.jpg"  class="card-img-top" alt="Buckets-Cover">
                        <div class="card-body">
-                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Interactive Design, Front End</p>
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Physical Prototype, Front End</p>
                          <h5 class="card-title">Smart Buckets: enabling interfaces.</h5>
                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
                        </div>
@@ -163,8 +162,8 @@
                 <!--Myni-->
                 <!--<div class="project-card" data-tags="UX,Physical Prototype">
                 <a href="projects/myni.html">
-                   <div class="p-2 pb-5" id="dp-Myni">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-Myni">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/myni/Myni.png"  class="card-img-top" alt="Myni-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Physical Prototype</p>
@@ -178,8 +177,8 @@
                <!--EggUp-->
                <!--<div class="project-card" data-tags="UX,Physical Prototype, Front end, Interactive Design">
                 <a href="projects/eggup.html">
-                   <div class="p-2 pb-5" id="dp-EggUp">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-EggUp">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/eggup/Eggup1.jpg"  class="card-img-top" alt="EggUp-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Physical Prototype, Front end, Interactive Design</p>
@@ -190,12 +189,27 @@
                    </div>
                  </a>
                </div>-->
+               <!--MyBubble-->
+               <div class="project-card" data-tags="UX,Service Design">
+                <a href="projects/mybubble.html">
+                   <div class="p-2 pb-5 h-100" id="dp-MyBubble">
+                     <div class="card margin-bottom h-100 pointer" > 
+                       <img src="images/mybubble/Mybubble1.jpg"  class="card-img-top" alt="MyBubble-Cover">
+                       <div class="card-body">
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Service Design</p>
+                         <h5 class="card-title">My Bubble: UX of a bank mobile app.</h5>
+                           <p class="card-subtitle">Bank service fow Millennials to manage money through a mobile application and an IoT Smart Cardholder.</p>
+                       </div>
+                     </div>
+                   </div>
+                 </a>
+               </div>
               <!--Phyleas-->
               <div class="project-card" data-tags="UX,UI,Service Design">
                <a href="projects/phyleas.html">
-                  <div class="p-2 pb-5" id="dp-Phyleas">
-                    <div class="card margin-bottom pointer" > 
-                      <img src="images/phyleas/Phyleas.png"  class="card-img-top" alt="Phyleas-Cover">
+                  <div class="p-2 pb-5 h-100" id="dp-Phyleas">
+                    <div class="card margin-bottom h-100 pointer" > 
+                      <img src="images/hp_covers/phyleas.jpg"  class="card-img-top" alt="Phyleas-Cover">
                       <div class="card-body">
                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Ui, Service Design</p>
                         <h5 class="card-title">Phyleas: your travel companion.</h5>
@@ -205,26 +219,11 @@
                   </div>
                 </a>
               </div>
-               <!--MyBubble-->
-               <div class="project-card" data-tags="UX,Service Design">
-                <a href="projects/mybubble.html">
-                   <div class="p-2 pb-5" id="dp-MyBubble">
-                     <div class="card margin-bottom pointer" > 
-                       <img src="images/mybubble/Mybubble1.jpg"  class="card-img-top" alt="MyBubble-Cover">
-                       <div class="card-body">
-                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Service Design</p>
-                         <h5 class="card-title">My Bubble: UX of a bank mobile app.</h5>
-                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
-                       </div>
-                     </div>
-                   </div>
-                 </a>
-               </div>
                <!--Movo-->
               <!--<div class="project-card" data-tags="AI">
                 <a href="projects/movo.html">
-                   <div class="p-2 pb-5" id="dp-Movo">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-Movo">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/movo/Movo1.jpg"  class="card-img-top" alt="Movo-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Artificial Intelligence</p>
@@ -236,15 +235,15 @@
                  </a>
                </div>-->
                 <!--360Learn-->
-                <div class="project-card" data-tags="UX,Front End">
+                <div class="project-card" data-tags="UX,Interaction Design">
                  <a href="projects/360learn.html">
-                    <div class="p-2 pb-5" id="dp-360Learn">
-                      <div class="card margin-bottom pointer" > 
+                    <div class="p-2 pb-5 h-100" id="dp-360Learn">
+                      <div class="card margin-bottom h-100 pointer" > 
                         <img src="images/360learn/Learn1.jpg"  class="card-img-top" alt="360Learn-Cover">
                         <div class="card-body">
-                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Front End</p>
+                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Interaction Design</p>
                           <h5 class="card-title">360Learn: interactive 360videos platform.</h5>
-                            <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                            <p class="card-subtitle">The Hyper360 technology developed by Gruppo Mediaset was used in a scenario to enhance education in schools.</p>
                         </div>
                       </div>
                     </div>
@@ -253,8 +252,8 @@
                <!--Trenord-->
                <!--<div class="project-card" data-tags="UX,Service Design">
                 <a href="projects/trenord.html">
-                   <div class="p-2 pb-5" id="dp-Trenord">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-Trenord">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/trenord/Trenord1.jpg"  class="card-img-top" alt="Trenord-Cover">
                        <div class="card-body">
                          <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Service Design</p>
@@ -266,15 +265,15 @@
                  </a>
                </div>-->
                <!--Anagrafe-->
-              <div class="project-card" data-tags="AI">
+              <div class="project-card" data-tags="UX,Interaction Design">
                 <a href="projects/anagrafe.html">
-                   <div class="p-2 pb-5" id="dp-Anagrafe">
-                     <div class="card margin-bottom pointer" > 
+                   <div class="p-2 pb-5 h-100" id="dp-Anagrafe">
+                     <div class="card margin-bottom h-100 pointer" > 
                        <img src="images/anagrafe/Anagrafe1.jpg"  class="card-img-top" alt="Anagrafe-Cover">
                        <div class="card-body">
-                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Artificial Intelligence</p>
+                         <p class="card-subtitle font-italic mb-2 border-bottom border-dark">Ux, Interaction Design</p>
                          <h5 class="card-title">Registry office website redesign.</h5>
-                           <p class="card-subtitle">Mobile app for commuters to give more meaning to the transportation experience in public transports.</p>
+                           <p class="card-subtitle">Innovative chatbot integration to help users through the procedure of a service in the best way possible..</p>
                        </div>
                      </div>
                    </div>
@@ -283,8 +282,8 @@
                <!--Lotte-->
                <!--<div class="project-card" data-tags="UX,Front End">
                  <a href="projects/lotte.html">
-                    <div class="p-2 pb-5" id="dp-Lotte">
-                      <div class="card margin-bottom pointer" > 
+                    <div class="p-2 pb-5 h-100" id="dp-Lotte">
+                      <div class="card margin-bottom h-100 pointer" > 
                         <img src="images/lotte/Lotte1.jpg"  class="card-img-top" alt="Lotte-Cover">
                         <div class="card-body">
                           <p class="card-subtitle font-italic mb-2 border-bottom border-dark">UX, Front End</p>
@@ -325,9 +324,9 @@
     </div>
   </div>
 
-  <div class="container-fluid px-md-5 px-sm-3 pt-5 px-2"><hr class="m-0 border-dark"></div>
+  <div class="container-fluid px-md-5 px-sm-3 pt-5 px-2"><!--hr class="m-0 border-dark"--></div>
 
-  <div class="container-fluid" id="design-highlights">
+  <!--div class="container-fluid" id="design-highlights">
     <div class="container py-5 my-5 px-2">
     <h2>Design Highlights</h2>
     <div class="row">
@@ -354,7 +353,7 @@
       <a href="/projects/tenutatrepalme.html" class="highlight-word" data-project="coding">CODING</a>
     </div>
   </div>
-  </div>
+  </div-->
 
 
       </div>

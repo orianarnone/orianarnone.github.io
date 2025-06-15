@@ -7,10 +7,17 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Firt Project</title>
+<title>Smart Buckets</title>
 
 <meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
 <meta name="description" content="First project description">
+
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
 
 <!-- CSS -->
 <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -20,13 +27,6 @@
 
 <!-- scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
-
-<script>
-  (function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  })();
-</script>
 
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,30 +47,41 @@
     <!-- Buckets -->
       <div class="mt-5 container-fluid p-0">
 
-        <div class="pt-5 container-lg">
-          <div class="row py-5">
-            <div class="col-12 col-lg-6 pr-lg-5">
-              <p class=" ">CHILDREN, NEUROLOGICAL DESEASE, SMART TOY</p><h1>Smart Buckets</h1>
-              <p>Innovative toy to help children with NDD .</p>
-            </div>
-            <div class="col-12 col-lg-3 pt-5">
-              <h3 class="">Keywords</h3>
-              <div class="">
-                <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                <p class="py-2 m-0">Smart room ecosystem, toy, children, psycologists</p>
+        <div class="pt-5 sumup data-trigger">
+          <div class="pt-5 container-lg">
+            <div class="row py-5">
+              <div class="col-12 col-lg-6 pr-lg-5">
+                <p class=" ">UX, INTERACTION DESIGN, PHYSICAL PROTOTYPE</p><h1>Smart Buckets</h1>
+                <p>An interactive system for NDD children and therapists, composed by smart containers connected to a multisensory room and a tablet application. The system is capable of recognizing multiple objects. 
+                  </p>
               </div>
-            </div>
-            <div class="col-12 col-lg-3 pt-5">
-              <h3 class="">My Role</h3>
-              <div class="">
-                <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                <p class="py-2 m-0">Researcher,<br> physical product and interaction designer</p>
+              <div class="col-12 col-lg-3 pt-5">
+                <h3 class="">Keywords</h3>
+                <div class="">
+                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
+                  <p class="py-2 m-0">Design thinking, methodology, multisensorial-room ecosystem, toy, children, psycologists</p>
+                </div>
+              </div>
+              <div class="col-12 col-lg-3 pt-5">
+                <h3 class="">My Role</h3>
+                <div class="">
+                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
+                  <p class="py-2 m-0">Researcher,<br>physical product designer, interaction designer, unity interface developer</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
 
-        <img src="../images/buckets/Bucket8.jpg" class="w-100" alt="Bucket1">
+        
+        <div class="position-relative">
+          <div class="sumup-background dark-trigger">
+          </div>
+          <div class="container-lg sumup-img">
+            <img src="../images/buckets/bucket_3.jpg" class="w-100" alt="Bucket">
+          </div>
+        </div>
+        
 
         <div class="pt-5 container-lg">
           <!--a  class="btn-dark rounded px-4 py-2" href="/index.html"> &lt; Back</a-->
@@ -79,18 +90,19 @@
             <div id="project-index" class="d-none d-md-block col-md-3 col-lg-2 py-5 mt-5 p-0">
               <div class="position-sticky d-flex flex-column" style="top:200px;">
                 <a href="#intro" class="active m-1 btn btn-sm btn-outline-dark rounded px-3">Overview</a>
-                <a href="#informationflow" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Information Flow</a>
-                <a href="#systemmap" class="m-1 btn btn-sm btn-outline-dark rounded px-3">System Map</a>
-                <a href="#improvements" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Improvements</a>
-                <a href="#wireframes" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Wireframes</a>
-                <a href="#userinterface" class="m-1 btn btn-sm btn-outline-dark rounded px-3">User Interface</a>
+                <a href="#stakeholders" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Stakeholders</a>
+                <a href="#scenarios" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Scenarios</a>
+                <a href="#product" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Product</a>
+                <a href="#control" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Control Panel</a>
+                <a href="#immersive" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Immersive Environment</a>
               </div>
             </div>
 
             <div data-bs-spy="scroll" data-bs-target="#project-index" data-bs-offset="0" tabindex="0" class="p-0 col-12 col-md-8 col-lg-9 mx-auto">
               
               <section class="pt-5 pb-0" id="intro">
-                <h1 class="pt-5">The system</h1>
+                
+                <h2 class="pt-5">The system</h2>
                 <div>
                   <p class="pb-3"> “Smart buckets” is an interactive system based on a set of smart containers, which are capable of recognizing the presence and the type of multiple objects inserted thanks to a scale system. The containers are connected to the “Smart room” ecosystem, but they are also equipped with led strips for giving feedback. The target group is children between 6 and 10 years old with various NDD severity rate and their therapists and teachers, So we decided to design also a tablet application to be used as a control panel.<br>
                     <br>
@@ -99,24 +111,24 @@
                     <br>
                     The dimensions are a good compromise between capacity and children’s usability, the bucket front panel can be removed giving access to wheelchair users, the bucket colored LEDs ensure clear feedback and children’s entertainment, the shape of the bucket is rounded and the electronic is hidden to children, the therapist can rapidly add an object to the system, without worrying to attach any tag to the object, the system is reliable to ensure a smooth experience for both children and therapists.</p>
                 </div>
-                <img src="../images/buckets/Bucket2.jpg" class="w-100" alt="Bucket2">
+                <img src="../images/buckets/Bucket2.png" class="w-100" alt="Bucket2">
               </section>
               
-              <section class="pt-5 pb-0" id="informationflow">
+              <section class="pt-5 pb-0" id="stakeholders">
                 <div>
                   <h2 class="pt-5"> Stakeholders </h2>
                 </div>
                 <img src="../images/buckets/Bucket3.jpg"  class="w-100" alt="Bucket3">
               </section>
 
-              <section class="pt-5 pb-0" id="systemmap">
+              <section class="pt-5 pb-0" id="scenarios">
                 <div>
                 <h2 class="pt-5"> Interaction study of two scenarios </h2>
                 </div>
                   <img src="../images/buckets/Bucket4.jpg"  class="w-100" alt="Bucket4"> 
               </section>
               
-              <section class="pt-5 pb-0" id="improvements">
+              <section class="pt-5 pb-0" id="product">
                 <div>
                   <h2 class="pt-5"> 3D model and physical object</h2>
                   <p class="pb-3"> In this part of the project we tought about the consequences of our service in terms of Self-perception, Actions and interpersonal relationship.Our critical theme was the automation of actions and services through the use of data. <br>
@@ -125,16 +137,16 @@
                 <img src="../images/buckets/Bucket5.jpg"  class="w-100" alt="Bucket5">
               </section>
               
-              <section class="pt-5 pb-0" id="wireframes">
+              <section class="pt-5 pb-0" id="control">
                 <div>
                 <h2 class="pt-5 pb-0"> Tablet application UI </h2>
                 </div>
                 <img src="../images/buckets/Bucket6.jpg"  class="w-100" alt="Bucket6">
               </section>
               
-              <section class="pt-5 pb-0" id="userinterface">
+              <section class="pt-5 pb-0" id="immersive">
                 <h2 class="pt-5"> Immersive environment </h2>
-                <img src="../images/buckets/Bucket7.jpg"  class="w-100" alt="Bucket7">
+                <img src="../images/buckets/bucket_2.jpg"  class="w-100" alt="Bucket7">
               </section> 
 
               
@@ -186,7 +198,7 @@
 
 <!-- Script to print common header and footer -->
 <script>
-  fetch('/common/header.html')
+  fetch('/common/header-dark.html')
   .then(response => response.text())
     .then(data => {
       document.body.insertAdjacentHTML('afterbegin', data);

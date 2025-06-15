@@ -80,6 +80,79 @@ function initializeLottie() {
   }
 }
 
+function setupDarkTriggerObserver() {
+  const darkTriggers = document.querySelectorAll('.dark-trigger');
+  const themeToggle = document.getElementById('theme-toggle');
+  const html = document.documentElement;
+
+  if (!themeToggle || darkTriggers.length === 0) return;
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        const isLightTheme = html.getAttribute('data-theme') === 'light';
+
+        if (!isLightTheme) return; // se è dark, ignora tutto
+
+        if (entry.isIntersecting) {
+          // Se .dark-trigger entra nel viewport
+          themeToggle.setDirection(1);
+          themeToggle.play();
+        } else {
+          // Se .dark-trigger esce dal viewport
+          themeToggle.setDirection(-1);
+          themeToggle.play();
+        }
+      });
+    },
+    {
+      root: null,
+      threshold: 0.1
+    }
+  );
+
+  darkTriggers.forEach(trigger => observer.observe(trigger));
+}
+
+
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const header = document.querySelector(".fixed-top");
+  const triggers = document.querySelectorAll(".dark-trigger");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      let isDarkVisible = false;
+
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          isDarkVisible = true;
+        }
+      });
+
+      if (isDarkVisible) {
+        header.classList.add("dark-on-scroll");
+      } else {
+        header.classList.remove("dark-on-scroll");
+      }
+    },
+    { threshold: 0.1 }
+  );
+
+  triggers.forEach(trigger => observer.observe(trigger));
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  initializeLottie();
+  setupDarkTriggerObserver();
+});
+
+window.addEventListener('load', () => {
+  document.documentElement.classList.remove('no-transition');
+});
+
+
 
 // Al caricamento della pagina, applica il tema salvato
 // document.addEventListener('DOMContentLoaded', () => {
