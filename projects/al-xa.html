@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Scanner Impronte AL-XA</title>
+  <style>
+    body {
+      background-color: #0a0a0a;
+      color: #00ffea;
+      font-family: 'Courier New', monospace;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+      border-bottom:1px solid #00ffea;
+      padding-bottom:10px;
+    }
+    button {
+      background-color: #00ffea;
+      color: #0a0a0a;
+      font-size: 1rem;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+      letter-spacing: 1px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #0a0a0a;
+      color: #00ffea;
+      border: 1px solid #00ffea;
+    }
+    #webcam-container {
+      margin-top: 20px;
+    }
+    #label-container {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Scanner Impronte AL-XA</h1>
+  <p>Posiziona le impronte davanti alla telecamera</p>
+  <button type="button" onclick="init()">Avvia Scanner</button>
+  <div id="webcam-container"></div>
+  <div id="label-container"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+  <script type="text/javascript">
+      const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/";
+      let model, webcam, labelContainer, maxPredictions;
+
+      async function init() {
+          const modelURL = URL + "model.json";
+          const metadataURL = URL + "metadata.json";
+
+          model = await tmImage.load(modelURL, metadataURL);
+          maxPredictions = model.getTotalClasses();
+
+          const flip = true;
+          webcam = new tmImage.Webcam(200, 200, flip);
+          await webcam.setup();
+          await webcam.play();
+          window.requestAnimationFrame(loop);
+
+          document.getElementById("webcam-container").appendChild(webcam.canvas);
+          labelContainer = document.getElementById("label-container");
+          labelContainer.innerHTML = "<p>Riconoscimento in corso...</p>";
+      }
+
+      async function loop() {
+          webcam.update();
+          await predict();
+          window.requestAnimationFrame(loop);
+      }
+
+      async function predict() {
+          const prediction = await model.predict(webcam.canvas);
+          let output = "";
+          for (let i = 0; i < maxPredictions; i++) {
+              output += prediction[i].className + ": " + (prediction[i].probability * 100).toFixed(1) + "%<br>";
+          }
+          labelContainer.innerHTML = output;
+      }
+  </script>
+</body>
+</html>
