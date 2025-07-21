@@ -64,7 +64,7 @@
 <body>
 <h1>Scanner Impronte AL-XA</h1>
 <div>Avvicina un’impronta per la verifica...</div>
-<button type="button" onclick="init()">START</button>
+<button type="button" id="startBtn">START</button>
 <div id="webcam-container"></div>
 <div class="tentativi">
   <div class="cerchio" id="c1"></div>
@@ -76,101 +76,87 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
-    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/"; 
+    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/";
     let model, webcam, maxPredictions;
     let tentativi = 0;
     let accessoConcesso = false;
-    let inPausa = false; // blocca il loop per 10 secondi tra un tentativo e l'altro
+    let inPausa = false;
+
+    document.getElementById("startBtn").addEventListener("click", async () => {
+        document.getElementById("startBtn").disabled = true;
+        document.getElementById("startBtn").textContent = "Avvio in corso...";
+        await init();
+        document.getElementById("startBtn").style.display = "none";
+    });
 
     async function init() {
         const modelURL = URL + "model.json";
         const metadataURL = URL + "metadata.json";
-        model = await tmImage.load(modelURL, metada
-        <!DOCTYPE html>
-<html lang="it">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Scanner Impronte AL-XA</title>
-<style>
-  body {
-    background-color: #0a0a0a;
-    color: #00ffea;
-    font-family: 'Courier New', monospace;
-    text-align: center;
-    padding: 40px;
-  }
-  h1 {
-    text-transform: uppercase;
-    font-size: 1.6rem;
-    letter-spacing: 2px;
-    margin-bottom: 10px;
-  }
-  #webcam-container {
-    margin: 25px auto;
-  }
-  .tentativi {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin: 15px 0;
-  }
-  .cerchio {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: #555;
-    box-shadow: 0 0 5px #00ffea;
-    transition: background 0.3s;
-  }
-  .verde { background-color: #00ff00; box-shadow: 0 0 10px #00ff00; }
-  .rosso { background-color: #ff0033; box-shadow: 0 0 10px #ff0033; }
-  #result {
-    font-size: 1.2rem;
-    margin-top: 25px;
-    color: #ffffff;
-    min-height: 40px;
-  }
-  button {
-    background-color: #00ffea;
-    color: #0a0a0a;
-    font-size: 1rem;
-    padding: 10px 20px;
-    border: 1px solid #00ffea;
-    cursor: pointer;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    margin-top: 10px;
-  }
-  button:hover {
-    background-color: #0a0a0a;
-    color: #00ffea;
-    border: 1px solid #00ffea;
-  }
-</style>
-</head>
-<body>
-<h1>Scanner Impronte AL-XA</h1>
-<div>Avvicina un’impronta per la verifica...</div>
-<button type="button" onclick="init()">START</button>
-<div id="webcam-container"></div>
-<div class="tentativi">
-  <div class="cerchio" id="c1"></div>
-  <div class="cerchio" id="c2"></div>
-  <div class="cerchio" id="c3"></div>
-</div>
-<div id="result">In attesa di riconoscimento...</div>
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
 
-<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-<script type="text/javascript">
-    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/"; 
-    let model, webcam, maxPredictions;
-    let tentativi = 0;
-    let accessoConcesso = false;
-    let inPausa = false; // blocca il loop per 10 secondi tra un tentativo e l'altro
+        const flip = true;
+        webcam = new tmImage.Webcam(200, 200, flip);
+        await webcam.setup();  // QUI parte il pop-up di consenso
+        await webcam.play();
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
 
-    async function init() {
-        const modelURL = URL + "model.json";
-        const metadataURL = URL + "metadata.json";
-        model = await tmImage.load(modelURL, metada
+        window.requestAnimationFrame(loop);
+    }
+
+    async function loop() {
+        if (!accessoConcesso && tentativi < 3 && !inPausa) {
+            webcam.update();
+            await predict();
+        }
+        window.requestAnimationFrame(loop);
+    }
+
+    async function predict() {
+        const prediction = await model.predict(webcam.canvas);
+        let riconosciuta = null;
+        let maxProb = 0;
+
+        prediction.forEach(p => {
+            if (p.probability > 0.9 && p.probability > maxProb) {
+                riconosciuta = p.className;
+                maxProb = p.probability;
+            }
+        });
+
+        if (riconosciuta) {
+            gestisciTentativo(riconosciuta);
+        }
+    }
+
+    function gestisciTentativo(riconosciuta) {
+        tentativi++;
+        const resultDiv = document.getElementById("result");
+        const cerchio = document.getElementById("c" + tentativi);
+
+        if (riconosciuta.toLowerCase().includes("azzurra")) {
+            accessoConcesso = true;
+            cerchio.classList.add("verde");
+            resultDiv.innerHTML =
+                "✅ Riconoscimento avvenuto.<br>Dare il comando:<br><strong>DISATTIVA DIFESA PRIMARIA</strong> al dispositivo.";
+        } else {
+            cerchio.classList.add("rosso");
+            if (tentativi < 3) {
+                resultDiv.textContent = "Tentativo " + tentativi + " fallito. Attendere 10 secondi...";
+                pausaTemporanea();
+            } else {
+                resultDiv.textContent = "❌ ACCESSO NEGATO – Difesa ancora attiva.";
+            }
+        }
+    }
+
+    function pausaTemporanea() {
+        inPausa = true;
+        setTimeout(() => {
+            inPausa = false;
+            document.getElementById("result").textContent = "In attesa di riconoscimento...";
+        }, 10000);
+    }
+</script>
+</body>
+</html>
