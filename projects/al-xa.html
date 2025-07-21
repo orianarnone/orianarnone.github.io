@@ -1,96 +1,112 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Scanner Impronte AL-XA</title>
-  <style>
-    body {
-      background-color: #0a0a0a;
-      color: #00ffea;
-      font-family: 'Courier New', monospace;
-      text-align: center;
-      padding: 30px;
-    }
-    h1 {
-      text-transform: uppercase;
-      font-size: 1.6rem;
-      letter-spacing: 2px;
-      margin-bottom: 20px;
-      border-bottom:1px solid #00ffea;
-      padding-bottom:10px;
-    }
-    button {
-      background-color: #00ffea;
-      color: #0a0a0a;
-      font-size: 1rem;
-      padding: 10px 20px;
-      border: none;
-      cursor: pointer;
-      border-radius: 4px;
-      letter-spacing: 1px;
-      margin-top: 10px;
-    }
-    button:hover {
-      background-color: #0a0a0a;
-      color: #00ffea;
-      border: 1px solid #00ffea;
-    }
-    #webcam-container {
-      margin-top: 20px;
-    }
-    #label-container {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      color: #ffffff;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Scanner Impronte AL-XA</title>
+<style>
+  body {
+    background-color: #0a0a0a;
+    color: #00ffea;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    padding: 40px;
+  }
+  h1 {
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+  }
+  #result {
+    margin-top: 20px;
+    font-size: 1.3rem;
+    color: #ff006e;
+    transition: 0.3s;
+  }
+  .ok {
+    color: #00ffea;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00ffea;
+  }
+  button {
+    background-color: #00ffea;
+    color: #0a0a0a;
+    font-size: 1rem;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+  }
+  button:hover {
+    background-color: #0a0a0a;
+    color: #00ffea;
+    border: 1px solid #00ffea;
+  }
+</style>
 </head>
 <body>
-  <h1>Scanner Impronte AL-XA</h1>
-  <p>Posiziona le impronte davanti alla telecamera</p>
-  <button type="button" onclick="init()">Avvia Scanner</button>
-  <div id="webcam-container"></div>
-  <div id="label-container"></div>
+<h1>Scanner Impronte AL-XA</h1>
+<div>Avvicina le impronte alla telecamera per la verifica...</div>
+<button type="button" onclick="init()">START</button>
+<div id="webcam-container"></div>
+<div id="result">In attesa di riconoscimento...</div>
 
-  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
-  <script type="text/javascript">
-      const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/";
-      let model, webcam, labelContainer, maxPredictions;
+<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
+<script type="text/javascript">
+    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/"; 
+    let model, webcam, labelContainer, maxPredictions;
 
-      async function init() {
-          const modelURL = URL + "model.json";
-          const metadataURL = URL + "metadata.json";
+    async function init() {
+        const modelURL = URL + "model.json";
+        const metadataURL = URL + "metadata.json";
+        model = await tmImage.load(modelURL, metadataURL);
+        maxPredictions = model.getTotalClasses();
 
-          model = await tmImage.load(modelURL, metadataURL);
-          maxPredictions = model.getTotalClasses();
+        const flip = true;
+        webcam = new tmImage.Webcam(200, 200, flip);
+        await webcam.setup();
+        await webcam.play();
+        window.requestAnimationFrame(loop);
 
-          const flip = true;
-          webcam = new tmImage.Webcam(200, 200, flip);
-          await webcam.setup();
-          await webcam.play();
-          window.requestAnimationFrame(loop);
+        document.getElementById("webcam-container").appendChild(webcam.canvas);
+    }
 
-          document.getElementById("webcam-container").appendChild(webcam.canvas);
-          labelContainer = document.getElementById("label-container");
-          labelContainer.innerHTML = "<p>Riconoscimento in corso...</p>";
-      }
+    async function loop() {
+        webcam.update();
+        await predict();
+        window.requestAnimationFrame(loop);
+    }
 
-      async function loop() {
-          webcam.update();
-          await predict();
-          window.requestAnimationFrame(loop);
-      }
+    async function predict() {
+        const prediction = await model.predict(webcam.canvas);
+        let detected = {};
+        let message = "In attesa di riconoscimento...";
+        let accessGranted = false;
 
-      async function predict() {
-          const prediction = await model.predict(webcam.canvas);
-          let output = "";
-          for (let i = 0; i < maxPredictions; i++) {
-              output += prediction[i].className + ": " + (prediction[i].probability * 100).toFixed(1) + "%<br>";
-          }
-          labelContainer.innerHTML = output;
-      }
-  </script>
+        // Salva le probabilità
+        prediction.forEach(p => {
+            detected[p.className] = p.probability;
+        });
+
+        // ✅ Cambia qui la combinazione corretta!
+        if ((detected["Verde"] > 0.85 && detected["Blu"] > 0.85) ||
+            (detected["Blu"] > 0.85 && detected["Gialla"] > 0.85)) {
+            accessGranted = true;
+            message = "Riconoscimento avvenuto.\nDare il comando:\nDISATTIVA DIFESA PRIMARIA al dispositivo.";
+        }
+
+        const resultDiv = document.getElementById("result");
+        resultDiv.textContent = message;
+        if (accessGranted) {
+            resultDiv.classList.add("ok");
+        } else {
+            resultDiv.classList.remove("ok");
+        }
+    }
+</script>
 </body>
 </html>
