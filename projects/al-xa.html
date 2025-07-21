@@ -64,7 +64,7 @@
 <body>
 <h1>Scanner Impronte AL-XA</h1>
 <div>Avvicina un’impronta per la verifica...</div>
-<button type="button" onclick="init()">START</button>
+<button type="button" id="startBtn">START</button>
 <div id="webcam-container"></div>
 <div class="tentativi">
   <div class="cerchio" id="c1"></div>
@@ -76,10 +76,18 @@
 <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@teachablemachine/image@latest/dist/teachablemachine-image.min.js"></script>
 <script type="text/javascript">
-    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/"; 
+    const URL = "https://teachablemachine.withgoogle.com/models/K3731LUlZ/";
     let model, webcam, maxPredictions;
     let tentativi = 0;
     let accessoConcesso = false;
+    let inPausa = false;
+
+    document.getElementById("startBtn").addEventListener("click", async () => {
+        document.getElementById("startBtn").disabled = true;
+        document.getElementById("startBtn").textContent = "Avvio in corso...";
+        await init();
+        document.getElementById("startBtn").style.display = "none";
+    });
 
     async function init() {
         const modelURL = URL + "model.json";
@@ -89,15 +97,15 @@
 
         const flip = true;
         webcam = new tmImage.Webcam(200, 200, flip);
-        await webcam.setup();
+        await webcam.setup();  // QUI parte il pop-up di consenso
         await webcam.play();
-        window.requestAnimationFrame(loop);
-
         document.getElementById("webcam-container").appendChild(webcam.canvas);
+
+        window.requestAnimationFrame(loop);
     }
 
     async function loop() {
-        if (!accessoConcesso && tentativi < 3) {
+        if (!accessoConcesso && tentativi < 3 && !inPausa) {
             webcam.update();
             await predict();
         }
@@ -110,33 +118,45 @@
         let maxProb = 0;
 
         prediction.forEach(p => {
-            if (p.probability > 0.8 && p.probability > maxProb) {
+            if (p.probability > 0.9 && p.probability > maxProb) {
                 riconosciuta = p.className;
                 maxProb = p.probability;
             }
         });
 
         if (riconosciuta) {
-            tentativi++;
-            const resultDiv = document.getElementById("result");
-            const cerchio = document.getElementById("c" + tentativi);
+            gestisciTentativo(riconosciuta);
+        }
+    }
 
-            if (riconosciuta.toLowerCase().includes("azzurra")) {
-                accessoConcesso = true;
-                cerchio.classList.add("verde");
-                resultDiv.innerHTML = 
-                    "✅ Riconoscimento avvenuto.<br>Dare il comando:<br><strong>DISATTIVA DIFESA PRIMARIA</strong> al dispositivo.";
+    function gestisciTentativo(riconosciuta) {
+        tentativi++;
+        const resultDiv = document.getElementById("result");
+        const cerchio = document.getElementById("c" + tentativi);
+
+        if (riconosciuta.toLowerCase().includes("azzurra")) {
+            accessoConcesso = true;
+            cerchio.classList.add("verde");
+            resultDiv.innerHTML =
+                "✅ Riconoscimento avvenuto.<br>Dare il comando:<br><strong>DISATTIVA DIFESA PRIMARIA</strong> al dispositivo.";
+        } else {
+            cerchio.classList.add("rosso");
+            if (tentativi < 3) {
+                resultDiv.textContent = "Tentativo " + tentativi + " fallito. Attendere 10 secondi...";
+                pausaTemporanea();
             } else {
-                cerchio.classList.add("rosso");
-                if (tentativi < 3) {
-                    resultDiv.textContent = "Tentativo " + tentativi + " fallito. Riprovare.";
-                } else {
-                    resultDiv.textContent = "❌ ACCESSO NEGATO – Difesa ancora attiva.";
-                }
+                resultDiv.textContent = "❌ ACCESSO NEGATO – Difesa ancora attiva.";
             }
         }
+    }
+
+    function pausaTemporanea() {
+        inPausa = true;
+        setTimeout(() => {
+            inPausa = false;
+            document.getElementById("result").textContent = "In attesa di riconoscimento...";
+        }, 10000);
     }
 </script>
 </body>
 </html>
-
