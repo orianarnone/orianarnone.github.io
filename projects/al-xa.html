@@ -95,9 +95,16 @@
         model = await tmImage.load(modelURL, metadataURL);
         maxPredictions = model.getTotalClasses();
 
-        const flip = true;
+        //const flip = true;
+        //webcam = new tmImage.Webcam(200, 200, flip);
+        //await webcam.setup();  // QUI parte il pop-up di consenso
+        
+        // Disattiviamo il flip perché con la posteriore non serve
+        const flip = false; 
         webcam = new tmImage.Webcam(200, 200, flip);
-        await webcam.setup();  // QUI parte il pop-up di consenso
+
+        // Forza la fotocamera posteriore
+        await webcam.setup({ facingMode: { exact: "environment" } }); 
         await webcam.play();
         document.getElementById("webcam-container").appendChild(webcam.canvas);
 
