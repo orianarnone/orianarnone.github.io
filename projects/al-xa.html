@@ -119,62 +119,22 @@
         window.requestAnimationFrame(loop);
     }
 
-    // async function predict() {
-    //     const prediction = await model.predict(webcam.canvas);
-    //     let riconosciuta = null;
-    //     let maxProb = 0;
-
-    //     prediction.forEach(p => {
-    //         if (p.probability > 0.9 && p.probability > maxProb) {
-    //             riconosciuta = p.className;
-    //             maxProb = p.probability;
-    //         }
-    //     });
-
-    //     if (riconosciuta) {
-    //         gestisciTentativo(riconosciuta);
-    //     }
-    // }
-
-    let lastPrediction = "";
-    let consecutiveCount = 0;
-    const requiredFrames = 10; // numero di frame consecutivi richiesti
-    const confidenceThreshold = 0.90; // 90%
-        
     async function predict() {
         const prediction = await model.predict(webcam.canvas);
-        let highestClass = "";
-        let highestProb = 0;
-    
-        // Trova la classe con la probabilità più alta
-        for (let i = 0; i < maxPredictions; i++) {
-            if (prediction[i].probability > highestProb) {
-                highestProb = prediction[i].probability;
-                highestClass = prediction[i].className;
+        let riconosciuta = null;
+        let maxProb = 0;
+
+        prediction.forEach(p => {
+            if (p.probability > 0.9 && p.probability > maxProb) {
+                riconosciuta = p.className;
+                maxProb = p.probability;
             }
-        }
-    
-        // Controlla se supera la soglia
-        if (highestProb >= confidenceThreshold) {
-            if (highestClass === lastPrediction) {
-                consecutiveCount++;
-            } else {
-                lastPrediction = highestClass;
-                consecutiveCount = 1;
-            }
-        
-            if (consecutiveCount >= requiredFrames) {
-                // ✅ Solo ora consideriamo valido il risultato
-                checkImpronta(highestClass); 
-                consecutiveCount = 0; // resetta per il tentativo successivo
-            }
-        } else {
-            // Reset se il frame non supera la soglia
-            lastPrediction = "";
-            consecutiveCount = 0;
+        });
+
+        if (riconosciuta) {
+            gestisciTentativo(riconosciuta);
         }
     }
-
 
     function gestisciTentativo(riconosciuta) {
         tentativi++;
