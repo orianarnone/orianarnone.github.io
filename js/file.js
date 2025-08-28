@@ -118,7 +118,12 @@ function setupDarkTriggerObserver() {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-  const header = document.querySelector(".fixed-top");
+  const initObserver = () => {
+    const header = document.querySelector(".fixed-top");
+    if (!header) {
+      setTimeout(initObserver, 100); // riprova tra 100ms
+      return;
+    }
   const triggers = document.querySelectorAll(".dark-trigger");
 
   const observer = new IntersectionObserver(
@@ -141,6 +146,8 @@ document.addEventListener("DOMContentLoaded", () => {
   );
 
   triggers.forEach(trigger => observer.observe(trigger));
+};
+initObserver();
 });
 
 document.addEventListener("DOMContentLoaded", () => {
