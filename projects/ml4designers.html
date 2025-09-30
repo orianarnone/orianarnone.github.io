@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="no-transition">
+<html lang="en" data-theme="light">
 
 <head>
 
@@ -7,17 +7,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Machine Learning for Designers</title>
+<title>Machine Learning for Designer project - portfolio Oriana Arnone</title>
 
 <meta name="google-site-verification" content="T4i99txmOrDQtu6aJdXFkwkdyRt8-6kLmpDTGKaEp4k" />
 <meta name="description" content="Oriana Arnone's Portfolio: Machine Learning for designers project">
-
-<script>
-  (function() {
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  })();
-</script>
 
 <!-- CSS -->
 <link href="/css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -28,6 +21,13 @@
 <!-- scripts -->
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="73ca461a-5bff-4ddf-956f-34ce05da2d8c" data-blockingmode="auto" type="text/javascript"></script>
 
+<script>
+  (function() {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+  })();
+</script>
+
 <!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,7 +35,7 @@
 </head>
 
 <body>
-   
+  <div class="transition transition-1 is-active"></div>
   <!-- Content -->
     <div id="content">
       <div id="imageModal" class="modal">
@@ -44,40 +44,59 @@
         <div id="caption"></div>
       </div>
       
-    <!-- ML4Designers -->
-      <div class="container-fluid p-0">
-        
+    <!-- Kidult -->
+      <div class="mt-5 container-fluid p-0">
+
         <div class="pt-5 sumup data-trigger">
-          <div class="pt-5 container-lg">
-            <div class="row py-5">
-              <div class="col-12 col-lg-6 pr-lg-5">
-                <p class=" ">ML, RESEARCH, METHODOLOGY, UX</p><h1>Machine Learning for Designers</h1>
-                <p>Design of a methodology and tools to enable designers to include AI in their projects.</p>
-              </div>
-              <div class="col-12 col-lg-3 pt-5">
-                <h3 class="">Keywords</h3>
-                <div class="">
-                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                  <p class="py-2 m-0">Design thinking, methodology, machine learning, tests and workshops, tools for designers</p>
-                </div>
-              </div>
-              <div class="col-12 col-lg-3 pt-5">
-                <h3 class="">My Role</h3>
-                <div class="">
-                  <hr class="border-3 w-100 ml-0 mr-0 border-dark">
-                  <p class="py-2 m-0">Researcher,<br> tools/kit designer</p>
-                </div>
-              </div>
+            <div class="container-lg py-5">
+              <p class=" ">ML, RESEARCH, METHODOLOGY, UX</p><h1>Machine Learning for Designers</h1>
+              <p>Design of a methodology and tools to enable designers to include AI in their projects.</p>
             </div>
-          </div>
         </div>
 
-        
         <div class="position-relative">
           <div class="sumup-background dark-trigger">
           </div>
-          <div class="container-lg sumup-img">
-            <img src="../images/ml4designers/ml4d_03.jpg" class="w-100" alt="ML4Designers">
+          <div class="container-lg">
+            <div class="sumup-img">
+            <img src="../images/ml4designers/ml4d_03.jpg" class="w-100" alt="ML4Designer">
+            <div class="info-container border border-dark border-top-0">
+            <div class="row">
+              <div class="p-2 col-6 col-md-4 border-right border-dark">
+                <div class="p-md-3">
+                  <h4>Timeline</h4>
+                  <p>11 months</p>
+                </div>
+              </div>
+              <div class="p-2 col-6 col-md-4 border-md-right border-dark">
+                
+                <div class="p-md-3">
+                  <h4>Team</h4>
+                  <p>1 ux/ui designer (me), 2 supervisor: a professor and a PHD student.</p>
+                </div>
+              </div>
+              <div class="p-2 col-12 col-md-4 border-md-top border-dark">
+                
+                <div class="p-md-3">
+                  <h4>My Role</h4>
+                  <p>Researcher, Author, tools/kit Designer</p>
+                </div>
+              </div>
+              <div class="p-2 col-12 col-md-6 border-top border-md-right border-dark">
+                <div class="p-md-3">
+                  <h4>Challenge</h4>
+                  <p>how can designers effectively create products, services, and experiences that integrate machine learning (ML) while keeping users at the center?</p>
+                </div>
+              </div>
+              <div class="p-2 col-12 col-md-6 border-top border-dark">
+                <div class="p-md-3">
+                  <h4>Solution</h4>
+                  <p>A set of tools to help designers understand ML capabilities and enable them to design AI-powered solutions.</p>
+                </div>
+              </div>
+            </div>             
+          </div>
+          </div>
           </div>
         </div>
 
@@ -85,7 +104,7 @@
           <!--a  class="btn-dark rounded px-4 py-2" href="/index.html"> &lt; Back</a-->
           <div class="row col-12 p-0 m-0">
 
-            <div id="project-index" class="d-none d-md-block col-md-3 col-lg-2 py-5 mt-5 p-0">
+            <div id="project-index" class="blur-background col-md-3 col-lg-2 py-md-5 py-3 p-0">
               <div class="position-sticky d-flex flex-column" style="top:200px;">
                 <a href="#intro" class="active m-1 btn btn-sm btn-outline-dark rounded px-3">Overview</a>
                 <a href="#goals" class="m-1 btn btn-sm btn-outline-dark rounded px-3">Project Goal</a>
@@ -198,7 +217,7 @@
                   After the academic testing phase, the toolkit attracted interest from professionals. I was invited to hold training sessions for a design team in a company exploring ML-driven services. Seeing the tools used in a real organizational setting confirmed their value and relevance. This experience also offered new perspectives, helping me consider how the materials can evolve for broader adoption in industry.
                 </p>
                 <img src="../images/ml4designers/timing.png"  class="w-100" alt="ml4d_08">
-              </section> 
+              </section>
 
               
 
@@ -219,8 +238,8 @@
                <p class="p-0 m-0">
                 Politecnico di Milano - Master thesis in Digital and interaction design<br><br>
                 May 2020 / April 2021<br>
-                Supervisor: Davide Spallazzo<br> 
-                Workshop assistant: Martina Scianname</p>
+                Supervisors: professor Davide Spallazzo and PHD student Martina Scianname 
+               </p>
               </div>
             </div>
             </div>
@@ -229,7 +248,8 @@
     </div>
   </div>
 
-
+<!-- page-transition --> 
+<script src="../js/transition-page.js"></script> 
 
 <!-- scrollspy --> 
 <script src="../js/scrollspy.js"></script> 
