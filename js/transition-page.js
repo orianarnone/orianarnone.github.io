@@ -18,7 +18,7 @@ window.onload = () => {
       const rawHref = anchor.getAttribute('href');
       
       // Skip empty hrefs, hash links (e.g., #section-id), or mailto links
-      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('javascript:')) {
+      if (!rawHref || rawHref.startsWith('#') || rawHref.startsWith('mailto:') || rawHref.startsWith('javascript:') || rawHref.startsWith('index.html#selected-projects')) {
         return; 
       }
       

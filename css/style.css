@@ -13,6 +13,13 @@ html.color-theme-in-transition *:after {
   transition: all 1200ms !important;
   transition-delay: 0 !important;
 }
+html {
+            scroll-behavior: smooth;
+        }
+        /* Offset for scrolled sections to account for sticky header if you have one 
+        section[id] {
+            scroll-margin-top: 100px; 
+        }*/
 
   html {
     --bg-color: #F3EBE4;
